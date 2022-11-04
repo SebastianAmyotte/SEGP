@@ -1,0 +1,37 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SEGP"
+             xmlns:pages="clr-namespace:SEGP.Pages"
+             x:Class="SEGP.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+    <Application.MainPage>
+        <Shell>
+            <TabBar x:Name="Tabs">
+                <Tab Title="Settings" Icon="accountico.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Settings}"/>
+                </Tab>
+                <Tab Title="PageOne">
+                    <ShellContent ContentTemplate="{DataTemplate pages:PageOne}"/>
+                </Tab>
+                <Tab Title="PageTwo">
+                    <ShellContent ContentTemplate="{DataTemplate pages:PageTwo}"/>
+                </Tab>
+                <Tab Title="PageThree">
+                    <ShellContent ContentTemplate="{DataTemplate pages:PageThree}"/>
+                </Tab>
+                <Tab Title="PageFour">
+                    <ShellContent ContentTemplate="{DataTemplate pages:PageFour}"/>
+                </Tab>
+            </TabBar>
+        </Shell>
+    </Application.MainPage>
+</Application>
