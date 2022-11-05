@@ -28,8 +28,8 @@
                 <Tab Title="PageThree">
                     <ShellContent ContentTemplate="{DataTemplate pages:PageThree}"/>
                 </Tab>
-                <Tab Title="PageFour">
-                    <ShellContent ContentTemplate="{DataTemplate pages:PageFour}"/>
+                <Tab Title="Journal" Icon="journal.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Journal}"/>
                 </Tab>
             </TabBar>
         </Shell>

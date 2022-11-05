@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.Journal"
+             Title="Journal">
+    <StackLayout Orientation="Vertical">
+        <FlexLayout JustifyContent="SpaceAround">
+            <ImageButton Source="arrowback.png" 
+                 Clicked="OnBackButtonPressed"
+                 HeightRequest="50"/>
+            <Label Text="11/05/2022"
+                FontSize="32"/>
+            <ImageButton Source="arrownext.png" 
+                 Clicked="OnNextButtonPressed"
+                 HeightRequest="50"/>
+        </FlexLayout>
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
+            <Entry WidthRequest="50" x:Name="rating" FontSize="32" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>
+        </HorizontalStackLayout>
+        <Border Margin="10,0,10,0"
+                Stroke="Black">
+            <Editor Margin="10,0,10,0"
+                    FontSize="18" 
+                    Placeholder="Type anything you'd like. Max 280 characters"
+                    MaxLength="280"
+                    AutoSize="TextChanges"
+                    HeightRequest = "400"/>
+        </Border>
+        <Button Text="Save!" Margin="25" Clicked="OnSaveButtonPressed"/>
+    </StackLayout>
+</ContentPage>

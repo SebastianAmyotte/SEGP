@@ -58,8 +58,8 @@
 	  <Compile Update="Pages\PageThree.xaml.cs">
 	    <DependentUpon>PageThree.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\PageFour.xaml.cs">
-	    <DependentUpon>PageFour.xaml</DependentUpon>
+	  <Compile Update="Pages\Journal.xaml.cs">
+	    <DependentUpon>Journal.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Settings.xaml.cs">
 	    <DependentUpon>Settings.xaml</DependentUpon>
@@ -73,7 +73,7 @@
 	  <MauiXaml Update="Pages\PageThree.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\PageFour.xaml">
+	  <MauiXaml Update="Pages\Journal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\PageOne.xaml">

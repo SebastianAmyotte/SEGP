@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>789270FF-7791-4654-9BE5-4A25A7B3E807</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Sebs\Desktop\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Sebs\Documents\GitHub\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>54260F4901DA548A7735E7005748E187F130180E58D6F265FA8BF6B416E2E663</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>789270FF-7791-4654-9BE5-4A25A7B3E807_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>789270FF-7791-4654-9BE5-4A25A7B3E807_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -26,28 +26,28 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Sebs\Desktop\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Sebs\Documents\GitHub\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-11-04T05:01:35.950</Modified>
+      <Modified>2022-11-05T22:00:09.051</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-11-04T05:00:53.191</Modified>
+      <Modified>2022-11-05T21:45:03.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.runtimeconfig.json">
       <PackagePath>SEGP.runtimeconfig.json</PackagePath>
-      <Modified>2022-11-04T04:54:25.529</Modified>
+      <Modified>2022-11-05T21:32:12.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.dll">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.dll">
       <PackagePath>SEGP.dll</PackagePath>
-      <Modified>2022-11-04T05:01:34.817</Modified>
+      <Modified>2022-11-05T22:00:07.951</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>SEGP.exe</PackagePath>
-      <Modified>2022-11-04T05:01:34.827</Modified>
+      <Modified>2022-11-05T22:00:07.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Sebs\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.10\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1061,9 +1061,9 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-07-19T16:53:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.deps.json">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\SEGP.deps.json">
       <PackagePath>SEGP.deps.json</PackagePath>
-      <Modified>2022-11-04T05:01:35.840</Modified>
+      <Modified>2022-11-05T22:00:08.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\6.0.541\ref\net6.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1077,185 +1077,193 @@
       <PackagePath>Microsoft.Maui.pri</PackagePath>
       <Modified>2022-09-28T01:21:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2022-11-04T04:51:09.025</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:52:52.962</Modified>
+      <Modified>2022-11-05T21:32:10.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:52:52.975</Modified>
+      <Modified>2022-11-05T21:32:10.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:52:52.993</Modified>
+      <Modified>2022-11-05T21:32:10.664</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:52:53.019</Modified>
+      <Modified>2022-11-05T21:32:10.690</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:52:53.120</Modified>
+      <Modified>2022-11-05T21:32:10.789</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
       <Modified>2022-11-04T04:51:09.021</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2022-11-04T04:51:09.022</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountico.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\accountico.scale-100.png">
       <PackagePath>accountico.scale-100.png</PackagePath>
       <Modified>2022-11-04T04:34:33.215</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2022-11-04T04:55:32.489</Modified>
+      <Modified>2022-11-05T21:32:10.827</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.650</Modified>
+      <Modified>2022-11-05T21:32:10.981</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.660</Modified>
+      <Modified>2022-11-05T21:32:10.991</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.670</Modified>
+      <Modified>2022-11-05T21:32:10.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.684</Modified>
+      <Modified>2022-11-05T21:32:11.013</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.740</Modified>
+      <Modified>2022-11-05T21:32:11.066</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.497</Modified>
+      <Modified>2022-11-05T21:32:10.838</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.500</Modified>
+      <Modified>2022-11-05T21:32:10.841</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.503</Modified>
+      <Modified>2022-11-05T21:32:10.844</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.507</Modified>
+      <Modified>2022-11-05T21:32:10.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.511</Modified>
+      <Modified>2022-11-05T21:32:10.851</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.554</Modified>
+      <Modified>2022-11-05T21:32:10.890</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.560</Modified>
+      <Modified>2022-11-05T21:32:10.894</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.566</Modified>
+      <Modified>2022-11-05T21:32:10.899</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.573</Modified>
+      <Modified>2022-11-05T21:32:10.907</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.587</Modified>
+      <Modified>2022-11-05T21:32:10.920</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.533</Modified>
+      <Modified>2022-11-05T21:32:10.870</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.536</Modified>
+      <Modified>2022-11-05T21:32:10.873</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.539</Modified>
+      <Modified>2022-11-05T21:32:10.876</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.543</Modified>
+      <Modified>2022-11-05T21:32:10.879</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.550</Modified>
+      <Modified>2022-11-05T21:32:10.886</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.514</Modified>
+      <Modified>2022-11-05T21:32:10.853</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.517</Modified>
+      <Modified>2022-11-05T21:32:10.856</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.520</Modified>
+      <Modified>2022-11-05T21:32:10.859</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.524</Modified>
+      <Modified>2022-11-05T21:32:10.862</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.530</Modified>
+      <Modified>2022-11-05T21:32:10.867</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.592</Modified>
+      <Modified>2022-11-05T21:32:10.925</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.597</Modified>
+      <Modified>2022-11-05T21:32:10.930</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.605</Modified>
+      <Modified>2022-11-05T21:32:10.937</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.616</Modified>
+      <Modified>2022-11-05T21:32:10.947</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.643</Modified>
+      <Modified>2022-11-05T21:32:10.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrowback.scale-100.png">
+      <PackagePath>arrowback.scale-100.png</PackagePath>
+      <Modified>2022-11-05T21:17:03.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrownext.scale-100.png">
+      <PackagePath>arrownext.scale-100.png</PackagePath>
+      <Modified>2022-11-05T21:17:04.200</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.474</Modified>
+      <Modified>2022-11-05T21:32:10.869</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.483</Modified>
+      <Modified>2022-11-05T21:32:10.877</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.494</Modified>
+      <Modified>2022-11-05T21:32:10.888</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.513</Modified>
+      <Modified>2022-11-05T21:32:10.904</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Sebs\Desktop\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Sebs\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2022-11-04T04:55:32.557</Modified>
+      <Modified>2022-11-05T21:32:10.941</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
