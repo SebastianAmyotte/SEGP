@@ -1,5 +1,6 @@
 OpenSans-Regular.ttf
 OpenSans-Semibold.ttf
+accountdefault.scale-100.png
 accountico.scale-100.png
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -37,6 +38,7 @@ dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
 dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
+edit.scale-100.png
 splashSplashScreen.scale-100.png
 splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png

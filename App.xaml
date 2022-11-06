@@ -16,8 +16,8 @@
     <Application.MainPage>
         <Shell>
             <TabBar x:Name="Tabs">
-                <Tab Title="Settings" Icon="accountico.png">
-                    <ShellContent ContentTemplate="{DataTemplate pages:Settings}"/>
+                <Tab Title="Profile" Icon="accountico.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Profile}"/>
                 </Tab>
                 <Tab Title="PageOne">
                     <ShellContent ContentTemplate="{DataTemplate pages:PageOne}"/>

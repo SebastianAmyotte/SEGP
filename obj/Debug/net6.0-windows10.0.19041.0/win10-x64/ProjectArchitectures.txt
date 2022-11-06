@@ -1,1 +1,1 @@
-C:\Users\Sebs\Desktop\SEGP\SEGP.csproj;x64
+C:\Users\ajzar\Desktop\SEGP\SEGP.csproj;x64
