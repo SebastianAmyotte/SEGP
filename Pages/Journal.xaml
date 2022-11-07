@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP.Pages.Journal"
              Title="Journal">
+    
     <StackLayout Orientation="Vertical">
         <FlexLayout JustifyContent="SpaceAround">
             <ImageButton Source="arrowback.png" 
                  Clicked="OnBackButtonPressed"
                  HeightRequest="50"/>
             <Label Text="11/05/2022"
-                FontSize="32"/>
+                FontSize="32"
+                   x:Name="date"/>
             <ImageButton Source="arrownext.png" 
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"/>
@@ -20,12 +22,12 @@
         </HorizontalStackLayout>
         <Border Margin="10,0,10,0"
                 Stroke="Black">
-            <Editor Margin="10,0,10,0"
-                    FontSize="18" 
+            <Editor FontSize="18" 
                     Placeholder="Type anything you'd like. Max 280 characters"
                     MaxLength="280"
                     AutoSize="TextChanges"
-                    HeightRequest = "400"/>
+                    HeightRequest = "250"
+                    x:Name="dailyThoughts"/>
         </Border>
         <Button Text="Save!" Margin="25" Clicked="OnSaveButtonPressed"/>
     </StackLayout>
