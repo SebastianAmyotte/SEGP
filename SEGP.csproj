@@ -54,6 +54,20 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\accountdefault.png" />
+	  <None Remove="Resources\Images\edit.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Login.xaml.cs">
+	    <DependentUpon>Login.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\Register.xaml.cs">
+	    <DependentUpon>Register.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\PageOne.xaml.cs">
+	    <DependentUpon>PageOne.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\PageTwo.xaml.cs">
 	    <DependentUpon>PageTwo.xaml</DependentUpon>
 	  </Compile>
@@ -63,8 +77,8 @@
 	  <Compile Update="Pages\PageFour.xaml.cs">
 	    <DependentUpon>PageFour.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\Settings.xaml.cs">
-	    <DependentUpon>Settings.xaml</DependentUpon>
+	  <Compile Update="Pages\Profile.xaml.cs">
+	    <DependentUpon>Profile.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -73,6 +87,10 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Notifications.xaml">
+	  <MauiXaml Update="Pages\Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Register.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\PageTwo.xaml">
@@ -84,7 +102,10 @@
 	  <MauiXaml Update="Pages\PageFour.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\Settings.xaml">
+	  <MauiXaml Update="Pages\PageOne.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Profile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

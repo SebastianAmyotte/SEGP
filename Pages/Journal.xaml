@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.Journal"
+             Title="Journal">
+    
+    <StackLayout Orientation="Vertical">
+        <FlexLayout JustifyContent="SpaceAround">
+            <ImageButton Source="arrowback.png" 
+                 Clicked="OnBackButtonPressed"
+                 HeightRequest="50"/>
+            <Label Text="11/05/2022"
+                FontSize="32"
+                   x:Name="date"/>
+            <ImageButton Source="arrownext.png" 
+                 Clicked="OnNextButtonPressed"
+                 HeightRequest="50"/>
+        </FlexLayout>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
+            <Entry WidthRequest="50" x:Name="rating" FontSize="32" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>
+        </HorizontalStackLayout>
+        <Border Margin="10,0,10,0"
+                Stroke="Black">
+            <Editor FontSize="18" 
+                    Placeholder="Type anything you'd like. Max 280 characters"
+                    MaxLength="280"
+                    AutoSize="TextChanges"
+                    HeightRequest = "250"
+                    x:Name="dailyThoughts"/>
+        </Border>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Save changes" Margin="0,25,10,0" Clicked="OnSaveButtonPressed" WidthRequest="200"/>
+            <Button Text="Discard changes" Margin="10,25,0,0" Clicked="OnRevertButtonPressed" WidthRequest="200"/>
+        </HorizontalStackLayout>
+        </StackLayout>
+</ContentPage>

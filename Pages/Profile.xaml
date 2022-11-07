@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.Profile"
+             Title="Profile">
+    <StackLayout>
+
+            <Image Source="accountdefault.png"
+               WidthRequest="200" />
+            <ImageButton Source="edit.png"
+                WidthRequest="25"
+                Clicked="OnEditImage" />
+       
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                <Button x:Name="LoginBtn"
+                    Grid.Row="0" 
+                    Grid.Column="0" 
+                    Text="Login"
+                    Clicked="OnLoginClicked"
+                     />
+                <Button x:Name="LogoutBtn" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    Text="Logout"
+                    Clicked="OnLogoutClicked"
+                     />
+
+                <Button x:Name="BackupBtn"
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    Text="Backup"
+                    Clicked="OnBackupClicked"
+                     />
+            <Button x:Name="RestoreBtn"
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Text="Restore"
+                    Clicked="OnRestoreClicked"
+                     />
+
+
+        </Grid>
+    </StackLayout>
+    
+    
+</ContentPage>

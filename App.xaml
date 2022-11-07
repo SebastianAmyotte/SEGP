@@ -16,8 +16,8 @@
     <Application.MainPage>
         <Shell>
             <TabBar x:Name="Tabs">
-                <Tab Title="Settings" Icon="accountico.png">
-                    <ShellContent ContentTemplate="{DataTemplate pages:Settings}"/>
+                <Tab Title="Profile" Icon="accountico.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Profile}"/>
                 </Tab>
                 <Tab Title="Notifications" Icon="notifications.png">
                     <ShellContent ContentTemplate="{DataTemplate pages:Notifications}"/>
@@ -28,8 +28,8 @@
                 <Tab Title="PageThree">
                     <ShellContent ContentTemplate="{DataTemplate pages:PageThree}"/>
                 </Tab>
-                <Tab Title="PageFour">
-                    <ShellContent ContentTemplate="{DataTemplate pages:PageFour}"/>
+                <Tab Title="Journal" Icon="journal.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Journal}"/>
                 </Tab>
             </TabBar>
         </Shell>
