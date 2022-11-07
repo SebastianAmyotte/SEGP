@@ -24567,24 +24567,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ajzar\\.nuget\\packages\\": {},
+    "C:\\Users\\Nice\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ajzar\\Desktop\\SEGP\\SEGP.csproj",
+      "projectUniqueName": "C:\\Users\\Nice\\Documents\\GitHub\\SEGP\\SEGP.csproj",
       "projectName": "SEGP",
-      "projectPath": "C:\\Users\\ajzar\\Desktop\\SEGP\\SEGP.csproj",
-      "packagesPath": "C:\\Users\\ajzar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ajzar\\Desktop\\SEGP\\obj\\",
+      "projectPath": "C:\\Users\\Nice\\Documents\\GitHub\\SEGP\\SEGP.csproj",
+      "packagesPath": "C:\\Users\\Nice\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nice\\Documents\\GitHub\\SEGP\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ajzar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nice\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
