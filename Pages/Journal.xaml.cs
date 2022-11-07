@@ -6,27 +6,21 @@ public partial class Journal : ContentPage
     DateTime currentDay = DateTime.Today;
     JournalEntry currentDisplayedEntry;
 
-	public Journal()
-	{
+    public Journal()
+    {
         InitializeComponent();
         //TODO: Serialize dailyEntries, for now create blank entry
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
-        updateCurrentEntry();
+        UpdateCurrentEntry();
     }
 
-	void OnBackButtonPressed(object sender, EventArgs e)
-	{
+    void OnBackButtonPressed(object sender, EventArgs e)
+    {
         currentDay = currentDay.AddDays(-1);
-        if (changesMade())
-        {
-            Task<bool> userChoice = DisplayAlert("Changes made", "Unsaved changes, would you like to save?", "Yes", "No");
-            if (userChoice.Result)
-            {
-                OnSaveButtonPressed(null, null);
-            }
-        }
-        updateCurrentEntry();
-	}
+        LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
+        UpdateCurrentEntry();
+    }
+
     void OnNextButtonPressed(object sender, EventArgs e)
     {
         currentDay = currentDay.AddDays(1);
@@ -34,22 +28,16 @@ public partial class Journal : ContentPage
         {
             DisplayAlert("Error", "Tomorrow hasn't started yet!", "OK");
             currentDay = currentDay.AddDays(-1);
-        } else
-        {
-            if (changesMade())
-            {
-                Task<bool> userChoice = DisplayAlert("Changes made", "Unsaved changes, would you like to save?", "Yes", "No");
-                if (userChoice.Result)
-                {
-                    OnSaveButtonPressed(null, null);
-                }
-            }
-            updateCurrentEntry();
         }
-        
+        else
+        {
+            LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
+            UpdateCurrentEntry();
+        }
+
     }
 
-    void updateCurrentEntry()
+    void UpdateCurrentEntry()
     {
         //Update data structure
         if (dailyEntries.ContainsKey(currentDay))
@@ -62,15 +50,30 @@ public partial class Journal : ContentPage
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
         //Update UI
-        date.Text = currentDay.ToString();
+        date.Text = currentDay.ToShortDateString();
         rating.Text = currentDisplayedEntry.GetRating();
         dailyThoughts.Text = currentDisplayedEntry.GetEntry();
     }
 
-    bool changesMade()
+    async void LookForUnsavedWorkAsync(JournalEntry currentJournal, String rating, String dailyThoughts)
     {
-        bool changesMadeToRating = currentDisplayedEntry.GetRating().Equals(rating.Text);
-        bool changesMadeToJournalEntry = currentDisplayedEntry.GetEntry().Equals(dailyThoughts.Text);
+        if (ChangesMade(currentJournal, rating, dailyThoughts))
+        {
+            bool response = await DisplayAlert("Unsaved work", "Unsaved work will be lost, would you like to save now?", "Save", "Discard");
+            if (response)
+            {
+                currentJournal.SaveRating(rating);
+                currentJournal.SaveEntry(dailyThoughts);
+            }
+        }
+    }
+
+
+
+    bool ChangesMade(JournalEntry currentJournal, String rating, String dailyThoughts)
+    {
+        bool changesMadeToRating = !currentJournal.GetRating().Equals(rating);
+        bool changesMadeToJournalEntry = !currentJournal.GetEntry().Equals(dailyThoughts);
         return changesMadeToRating || changesMadeToJournalEntry;
     }
 
