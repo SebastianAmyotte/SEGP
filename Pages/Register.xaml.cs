@@ -14,6 +14,6 @@ public partial class Register : ContentPage
 
     async void CancelRegistrationClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Profile());
+        await Navigation.PopAsync();
     }
 }

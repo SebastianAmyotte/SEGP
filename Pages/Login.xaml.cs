@@ -14,7 +14,7 @@ public partial class Login : ContentPage
 
     async void OnCancelClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Profile());
+        await Navigation.PopAsync();
     }
 
     void OnForgotPasswordClicked(object sender, EventArgs e)
