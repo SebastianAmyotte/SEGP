@@ -49,9 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\PageOne.xaml.cs">
-	    <DependentUpon>PageOne.xaml</DependentUpon>
-	  </Compile>
+	  <None Remove="Resources\Images\addcircle.png" />
+	  <None Remove="Resources\Images\notifications.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Pages\PageTwo.xaml.cs">
 	    <DependentUpon>PageTwo.xaml</DependentUpon>
 	  </Compile>
@@ -67,6 +69,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\AddNotification.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Notifications.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\PageTwo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -74,9 +82,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\PageFour.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\PageOne.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Settings.xaml">

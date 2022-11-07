@@ -19,8 +19,8 @@
                 <Tab Title="Settings" Icon="accountico.png">
                     <ShellContent ContentTemplate="{DataTemplate pages:Settings}"/>
                 </Tab>
-                <Tab Title="PageOne">
-                    <ShellContent ContentTemplate="{DataTemplate pages:PageOne}"/>
+                <Tab Title="Notifications" Icon="notifications.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Notifications}"/>
                 </Tab>
                 <Tab Title="PageTwo">
                     <ShellContent ContentTemplate="{DataTemplate pages:PageTwo}"/>
