@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.AddNotification"
+             Title="AddNotification">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout Grid.Column="0">
+                <Label HorizontalOptions="End"
+                       Text="Time Interval:" FontSize="32" 
+                       Padding="10"
+                       Margin="50"/>
+
+                <Label HorizontalOptions="End"
+                       Text="At:" FontSize="32" 
+                       Padding="10"
+                       Margin="50"/>
+
+                <Label HorizontalOptions="End"
+                       Text="Text to display:" FontSize="32" 
+                       Padding="10"
+                       HeightRequest="200"
+                       Margin="50"/>
+
+                <Label HorizontalOptions="End"
+                       Text="Notification Type:" FontSize="32" 
+                       Padding="10"
+                       Margin="50"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="1">
+                <Border HorizontalOptions="Start"
+                        Stroke="Black"
+                        Margin="50">
+                    <Entry x:Name="interval" 
+                           FontSize="28" 
+                           Placeholder="Daily"
+                           WidthRequest="200"/>
+                </Border>
+
+                <Border HorizontalOptions="Start"
+                        Stroke="Black"
+                        Margin="50">
+                    <Entry x:Name="time" 
+                           FontSize="28" 
+                           Placeholder="16:30"
+                           WidthRequest="200"/>
+                </Border>
+
+                <Border HorizontalOptions="Start"
+                        Stroke="Black"
+                        Margin="50">
+                    <Editor x:Name="text" 
+                            Margin="10,0,10,0"
+                            FontSize="24" 
+                            Placeholder="Enter text here"
+                            WidthRequest="300"
+                            HeightRequest="200"/>
+                </Border>
+                
+                <Border HorizontalOptions="Start"
+                        Stroke="Black"
+                        Margin="50">
+                    <Entry x:Name="type" 
+                           FontSize="28" 
+                           Placeholder="Vibration"
+                           WidthRequest="200"/>
+                </Border>
+            </VerticalStackLayout>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </Grid>
+        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,100,0,0">
+            <Button Text="Schedule Notification" 
+                    Clicked="OnScheduleNotificationPressed"
+                    Margin="0,0,200,0"/>
+            
+            <Button Text="Cancel" 
+                    Clicked="OnCancelPressed"
+                    Margin="0,0,100,0"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
