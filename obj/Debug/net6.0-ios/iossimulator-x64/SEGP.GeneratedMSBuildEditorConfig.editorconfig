@@ -7,87 +7,87 @@ build_property.InvariantGlobalization = false
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SEGP
-build_property.ProjectDir = C:\Users\Calvin\source\repos\SEGP\
+build_property.ProjectDir = C:\Users\larsoc40\Source\Repos\SEGP\
 
-[C:/Users/Calvin/source/repos/SEGP/App.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/AppShell.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/MainPage.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/AddNotification.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/AddNotification.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.AddNotification.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\AddNotification.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\AddNotification.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/Journal.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/Journal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Journal.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Journal.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Journal.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/Login.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/Login.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Login.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Login.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Login.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/Notifications.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/Notifications.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Notifications.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Notifications.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Notifications.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/PageFour.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/PageFour.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageFour.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\PageFour.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PageFour.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/PageThree.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/PageThree.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageThree.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\PageThree.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PageThree.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/PageTwo.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/PageTwo.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageTwo.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\PageTwo.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\PageTwo.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/Profile.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/Profile.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Profile.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Profile.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Profile.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Pages/Register.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Pages/Register.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Register.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Register.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Register.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Resources/Styles/Colors.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Calvin/source/repos/SEGP/Resources/Styles/Styles.xaml]
+[C:/Users/larsoc40/Source/Repos/SEGP/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
