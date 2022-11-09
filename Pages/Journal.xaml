@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP.Pages.Journal"
              Title="Journal">
-    
+    <ScrollView>
     <StackLayout Orientation="Vertical">
         <FlexLayout JustifyContent="SpaceAround">
             <ImageButton Source="arrowback.png" 
@@ -20,18 +20,20 @@
             <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
             <Entry WidthRequest="50" x:Name="rating" FontSize="32" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>
         </HorizontalStackLayout>
-        <Border Margin="10,0,10,0"
+        <Border Margin="10,10,10,0"
                 Stroke="Black">
-            <Editor FontSize="18" 
+            <Editor Margin="10,0,0,0"
+                    FontSize="18" 
                     Placeholder="Type anything you'd like. Max 280 characters"
                     MaxLength="280"
                     AutoSize="TextChanges"
-                    HeightRequest = "250"
+                    HeightRequest = "220"
                     x:Name="dailyThoughts"/>
         </Border>
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Text="Save changes" Margin="0,25,10,0" Clicked="OnSaveButtonPressed" WidthRequest="200"/>
-            <Button Text="Discard changes" Margin="10,25,0,0" Clicked="OnRevertButtonPressed" WidthRequest="200"/>
+            <Button Text="Save changes" Margin="0,25,10,0" Clicked="OnSaveButtonPressed" WidthRequest="150"/>
+            <Button Text="Discard changes" Margin="10,25,0,0" Clicked="OnRevertButtonPressed" WidthRequest="150"/>
         </HorizontalStackLayout>
         </StackLayout>
+    </ScrollView>
 </ContentPage>

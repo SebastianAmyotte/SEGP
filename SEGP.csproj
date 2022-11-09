@@ -71,8 +71,8 @@
 	  <Compile Update="Pages\PageTwo.xaml.cs">
 	    <DependentUpon>PageTwo.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\PageThree.xaml.cs">
-	    <DependentUpon>PageThree.xaml</DependentUpon>
+	  <Compile Update="Pages\Destress.xaml.cs">
+	    <DependentUpon>Destress.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\PageFour.xaml.cs">
 	    <DependentUpon>PageFour.xaml</DependentUpon>
@@ -98,7 +98,7 @@
 	  <MauiXaml Update="Pages\PageTwo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\PageThree.xaml">
+	  <MauiXaml Update="Pages\Destress.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\PageFour.xaml">

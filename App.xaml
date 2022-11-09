@@ -22,8 +22,8 @@
                 <Tab Title="Notifications" Icon="notifications.png">
                     <ShellContent ContentTemplate="{DataTemplate pages:Notifications}"/>
                 </Tab>
-                <Tab Title="PageTwo">
-                    <ShellContent ContentTemplate="{DataTemplate pages:PageTwo}"/>
+                <Tab Title="Destress" Icon="heart.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Destress}"/>
                 </Tab>
                 <Tab Title="PageThree">
                     <ShellContent ContentTemplate="{DataTemplate pages:PageThree}"/>
