@@ -11,33 +11,44 @@
 
             </Grid.ColumnDefinitions>
 
-            <VerticalStackLayout Grid.Column="0">
+            <StackLayout Grid.Column="0">
                 <Label HorizontalOptions="End"
-                       Text="Time Interval:" FontSize="32" 
+                       Text="Time Interval:" FontSize="28" 
                        Padding="10"
-                       Margin="50"/>
+                       WidthRequest="200"
+                       Margin="0,0,25,0"/>
 
                 <Label HorizontalOptions="End"
-                       Text="At:" FontSize="32" 
+                       Text="At:" FontSize="28" 
                        Padding="10"
-                       Margin="50"/>
+                       Margin="0,0,25,0"/>
 
                 <Label HorizontalOptions="End"
-                       Text="Text to display:" FontSize="32" 
+                       Text="Text to display:" FontSize="28" 
                        Padding="10"
-                       HeightRequest="200"
-                       Margin="50"/>
+                       HorizontalTextAlignment="End"
+                       WidthRequest="150"
+                       HeightRequest="163"
+                       Margin="0,0,25,0"/>
 
                 <Label HorizontalOptions="End"
-                       Text="Notification Type:" FontSize="32" 
+                       Text="Notification Type:" FontSize="28" 
                        Padding="10"
-                       Margin="50"/>
-            </VerticalStackLayout>
+                       HorizontalTextAlignment="End"
+                       WidthRequest="200"
+                       Margin="0,0,25,0"/>
+
+                <Button Text="Schedule Notification" 
+                        Clicked="OnScheduleNotificationPressed"
+                        WidthRequest="200"
+                        Margin="0,25,25,0"
+                        HorizontalOptions="End"/>
+            </StackLayout>
 
             <VerticalStackLayout Grid.Column="1">
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
-                        Margin="50">
+                        Margin="25,0,0,0">
                     <Entry x:Name="interval" 
                            FontSize="28" 
                            Placeholder="Daily"
@@ -46,7 +57,8 @@
 
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
-                        Margin="50">
+                        Padding="10"
+                        Margin="25,0,0,0">
                     <Entry x:Name="time" 
                            FontSize="28" 
                            Placeholder="16:30"
@@ -55,44 +67,30 @@
 
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
-                        Margin="50">
+                        Margin="25,0,0,0">
                     <Editor x:Name="text" 
                             Margin="10,0,10,0"
                             FontSize="24" 
                             Placeholder="Enter text here"
-                            WidthRequest="300"
+                            WidthRequest="200"
                             HeightRequest="200"/>
                 </Border>
-                
+
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
-                        Margin="50">
+                        Margin="25,0,0,0">
                     <Entry x:Name="type" 
-                           FontSize="28" 
+                           FontSize="24" 
                            Placeholder="Vibration"
                            WidthRequest="200"/>
                 </Border>
+
+                <Button Text="Cancel" 
+                        Clicked="OnCancelPressed"
+                        WidthRequest="200"
+                        Margin="25,25,0,0"
+                        HorizontalOptions="Start"/>
             </VerticalStackLayout>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         </Grid>
-        <HorizontalStackLayout HorizontalOptions="Center" Margin="0,100,0,0">
-            <Button Text="Schedule Notification" 
-                    Clicked="OnScheduleNotificationPressed"
-                    Margin="0,0,200,0"/>
-            
-            <Button Text="Cancel" 
-                    Clicked="OnCancelPressed"
-                    Margin="0,0,100,0"/>
-        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
