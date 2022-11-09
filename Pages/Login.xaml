@@ -12,11 +12,11 @@
             <Label  x:Name="userpassword" Margin="5,5" Text="Password:" FontSize="32"/>
             <Entry  Margin="5,5"  Placeholder="Password" FontSize="32" IsPassword="True" HorizontalOptions="Fill"/>
 
-            <VerticalStackLayout>
-                <Button Text="Login" />
-                <Button Text="Register" Clicked="OnRegisterClicked"/>
-                <Button Text="Cancel" Clicked="OnCancelClicked" />
-                <Button Text="Forgot Password?" Clicked="OnForgotPasswordClicked"/>
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Text="Login" WidthRequest="150"  Margin="10" />
+                <Button Text="Register" Clicked="OnRegisterClicked" WidthRequest="150" Margin="10"/>
+                <Button Text="Cancel" Clicked="OnCancelClicked" WidthRequest="150" Margin="10"/>
+                <Button Text="Forgot Password?" Clicked="OnForgotPasswordClicked" WidthRequest="150" Margin="10"/>
             </VerticalStackLayout>
 
         </StackLayout>

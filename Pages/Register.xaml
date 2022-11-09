@@ -13,9 +13,9 @@
             <Label Margin="5,5" Text="Password must be at least 9 characters long and contain at least 1 number. 
 Passwords are case sensitive, can include symbols, and can be up to 25 characters long."
                    FontSize="16"/>
-            <HorizontalStackLayout>
-                <Button Text="Register" Clicked="RegisterUserClicked"/>
-                <Button Text="Cancel" Clicked="CancelRegistrationClicked" />
+            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Button Text="Register" Clicked="RegisterUserClicked" WidthRequest="150" Margin="25"/>
+                <Button Text="Cancel" Clicked="CancelRegistrationClicked" WidthRequest="150" Margin="25"/>
             </HorizontalStackLayout>
             
         </StackLayout>

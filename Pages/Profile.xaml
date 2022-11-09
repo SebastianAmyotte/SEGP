@@ -5,50 +5,57 @@
              Title="Profile">
     <StackLayout>
 
+        <HorizontalStackLayout HorizontalOptions="Center">
             <Image Source="accountdefault.png"
-               WidthRequest="200" />
+               WidthRequest="200"
+                   />
             <ImageButton Source="edit.png"
                 WidthRequest="25"
-                Clicked="OnEditImage" />
-       
-            <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                Clicked="OnEditImage"
+                VerticalOptions="End"/>
+        </HorizontalStackLayout>
 
+        <VerticalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
                 <Button x:Name="LoginBtn"
-                    Grid.Row="0" 
-                    Grid.Column="0" 
                     Text="Login"
                     Clicked="OnLoginClicked"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"
+ 
                      />
                 <Button x:Name="LogoutBtn" 
-                    Grid.Row="0" 
-                    Grid.Column="1" 
                     Text="Logout"
                     Clicked="OnLogoutClicked"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"
                      />
-
+                
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center">
                 <Button x:Name="BackupBtn"
-                    Grid.Row="1" 
-                    Grid.Column="0" 
                     Text="Backup"
                     Clicked="OnBackupClicked"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"
                      />
-            <Button x:Name="RestoreBtn"
-                    Grid.Row="1" 
-                    Grid.Column="1" 
+                <Button x:Name="RestoreBtn"
                     Text="Restore"
                     Clicked="OnRestoreClicked"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"
                      />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
 
-
-        </Grid>
     </StackLayout>
     
     
