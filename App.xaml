@@ -25,8 +25,8 @@
                 <Tab Title="Destress" Icon="heart.png">
                     <ShellContent ContentTemplate="{DataTemplate pages:Destress}"/>
                 </Tab>
-                <Tab Title="PageThree">
-                    <ShellContent ContentTemplate="{DataTemplate pages:PageThree}"/>
+                <Tab Title="Checklist" Icon="checklist.png">
+                    <ShellContent ContentTemplate="{DataTemplate pages:Checklist}"/>
                 </Tab>
                 <Tab Title="Journal" Icon="journal.png">
                     <ShellContent ContentTemplate="{DataTemplate pages:Journal}"/>

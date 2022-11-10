@@ -12,8 +12,8 @@ public partial class Notifications : ContentPage
 		await Navigation.PushAsync(new AddNotification());
 	}
 
-	void OnDeleteButtonClicked(object sender, EventArgs e)
-	{
-		//Deletes notification
-	}
+    void OnDeleteButtonPressed(object sender, EventArgs e)
+    {
+        DisplayAlert("Deleted item", "Item deleted! (Not actually)", "OK");
+    }
 }

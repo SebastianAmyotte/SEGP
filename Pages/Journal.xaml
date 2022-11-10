@@ -5,30 +5,34 @@
              Title="Journal">
     <ScrollView>
     <StackLayout Orientation="Vertical">
-        <FlexLayout JustifyContent="SpaceAround">
+        <FlexLayout JustifyContent="Center">
             <ImageButton Source="arrowback.png" 
                  Clicked="OnBackButtonPressed"
-                 HeightRequest="50"/>
+                 HeightRequest="50"
+                 Margin="0,0,25,0"/>
             <Label Text="11/05/2022"
                 FontSize="32"
                    x:Name="date"/>
             <ImageButton Source="arrownext.png" 
                  Clicked="OnNextButtonPressed"
-                 HeightRequest="50"/>
+                 HeightRequest="50"
+                         Margin="25,0,0,0"/>
         </FlexLayout>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
             <Entry WidthRequest="50" x:Name="rating" FontSize="32" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>
         </HorizontalStackLayout>
         <Border Margin="10,10,10,0"
-                Stroke="Black">
+                Stroke="Black"
+                MaximumWidthRequest="450">
             <Editor Margin="10,0,0,0"
                     FontSize="18" 
                     Placeholder="Type anything you'd like. Max 280 characters"
                     MaxLength="280"
                     AutoSize="TextChanges"
                     HeightRequest = "220"
-                    x:Name="dailyThoughts"/>
+                    x:Name="dailyThoughts"
+                    />
         </Border>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Button Text="Save changes" Margin="0,25,10,0" Clicked="OnSaveButtonPressed" WidthRequest="150"/>
