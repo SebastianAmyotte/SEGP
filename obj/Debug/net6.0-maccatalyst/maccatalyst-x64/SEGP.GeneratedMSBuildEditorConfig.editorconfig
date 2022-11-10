@@ -63,24 +63,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Notifications.x
 build_metadata.AdditionalFiles.TargetPath = Pages\Notifications.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Notifications.xaml
 
-[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/PageFour.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageFour.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\PageFour.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\PageFour.xaml
-
-[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/PageThree.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageThree.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\PageThree.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\PageThree.xaml
-
-[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/PageTwo.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.PageTwo.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\PageTwo.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\PageTwo.xaml
-
 [C:/Users/Sebs/Documents/GitHub/SEGP/Pages/Profile.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Profile.xaml

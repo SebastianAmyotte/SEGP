@@ -12,7 +12,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <VerticalStackLayout Grid.Row="0" Grid.Column="0" WidthRequest="450">
-
             <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
                 <Border Stroke="Black" Padding="0,10,10,10"  WidthRequest="450">
                     <Label Text="De-stress 6:30pm Vibration" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />

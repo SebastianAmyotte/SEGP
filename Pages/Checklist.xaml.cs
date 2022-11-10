@@ -24,7 +24,7 @@ public partial class Checklist : ContentPage
         }
         else
         {
-            currentDisplayedEntry = new ChecklistEntry("", "", currentDay);
+            currentDisplayedEntry = new ChecklistEntry("", currentDay);
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
 
@@ -83,7 +83,7 @@ public class ChecklistEntry
     public String listEntry;
     public DateTime dates;
 
-    public ChecklistEntry(String entry, String rating, DateTime dates)
+    public ChecklistEntry(String entry, DateTime dates)
     {
         this.listEntry = entry;
         this.dates = dates;
