@@ -136,5 +136,4 @@ public class JournalEntry
     {
         this.rating = rating;
     }
-
 }

@@ -27,7 +27,7 @@
                 MaximumWidthRequest="450">
             <Editor Margin="10,0,0,0"
                     FontSize="18" 
-                    Placeholder="Type anything you'd like. Max 280 characters"
+                    Placeholder="Type anything you'd like. 280 characters"
                     MaxLength="280"
                     AutoSize="TextChanges"
                     HeightRequest = "220"

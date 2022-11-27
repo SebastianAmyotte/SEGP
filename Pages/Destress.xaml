@@ -11,21 +11,52 @@
         <Border Margin="5">
         <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
             <Label Text="Duration: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-            <Entry Placeholder="30 seconds" FontSize="22" WidthRequest="250"/>
-        </HorizontalStackLayout>
+                <Picker x:Name="durationPicker" Title="Duration" FontSize="18" SelectedIndexChanged="DurationPicked">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>15 seconds</x:String>
+                            <x:String>30 seconds</x:String>
+                            <x:String>1 minute</x:String>
+                            <x:String>2 minutes</x:String>
+                            <x:String>3 minutes</x:String>
+                            <x:String>4 minutes</x:String>
+                            <x:String>5 minutes</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
         </Border>
         <Border Margin="5">
         <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
             <Label Text="Sound: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-            <Entry Placeholder="Ocean waves" FontSize="22" WidthRequest="250"/>
-        </HorizontalStackLayout>
+                <Picker x:Name="soundPicker" Title="Sound" FontSize="18" SelectedIndexChanged="SoundPicked">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Rain</x:String>
+                            <x:String>Ocean waves</x:String>
+                            <x:String>White noise</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
         </Border>
         <Border Margin="5">
-        <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-            <Label Text="Backgrounds: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-            <Entry Placeholder="Forest" FontSize="22" WidthRequest="250"/>
-        </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
+                <Label Text="Backgrounds: " VerticalOptions="Center" Margin="5" FontSize="22"/>
+                <Picker x:Name="backgroundPicker" Title="Backgrounds" FontSize="18" SelectedIndexChanged="BackgroundPicked">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Ocean waves</x:String>
+                            <x:String>Forest</x:String>
+                            <x:String>Space</x:String>
+                            <x:String>No background</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </HorizontalStackLayout>
         </Border>
-        <Button Text="Start de-stressing" WidthRequest="250" FontSize="22"/>
+        <Button x:Name="SubmitButton" Text="Start de-stressing" WidthRequest="250" FontSize="22" Clicked="StartDestressingButton" Margin="10"/>
+        <!-- Debug button remove before final submission -->
+        <Button x:Name="DebugButton" Text="DebugView" WidthRequest="250" FontSize="22" Clicked="StartDestressingButton" />
     </StackLayout>
 </ContentPage>

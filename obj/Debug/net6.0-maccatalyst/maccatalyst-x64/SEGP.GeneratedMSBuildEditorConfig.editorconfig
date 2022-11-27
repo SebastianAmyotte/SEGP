@@ -45,6 +45,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Destress.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Destress.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Destress.xaml
 
+[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/DestressVideoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressVideoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DestressVideoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DestressVideoPage.xaml
+
 [C:/Users/Sebs/Documents/GitHub/SEGP/Pages/Journal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Journal.xaml
