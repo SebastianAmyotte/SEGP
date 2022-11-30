@@ -39,17 +39,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Checklist.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\Checklist.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\Checklist.xaml
 
-[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/Destress.xaml]
+[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/DestressPage/Destress.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Destress.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\Destress.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\Destress.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressPage.Destress.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DestressPage\Destress.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DestressPage\Destress.xaml
 
-[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/DestressVideoPage.xaml]
+[C:/Users/Sebs/Documents/GitHub/SEGP/Pages/DestressPage/DestressVideoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressVideoPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages\DestressVideoPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages\DestressVideoPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressPage.DestressVideoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DestressPage\DestressVideoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DestressPage\DestressVideoPage.xaml
 
 [C:/Users/Sebs/Documents/GitHub/SEGP/Pages/Journal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

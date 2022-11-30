@@ -1,5 +1,7 @@
-﻿namespace SEGP;
+﻿using Plugin.Maui.Audio;
+using SEGP.Pages;
 
+namespace SEGP;
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
@@ -12,7 +14,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-
+        builder.Services.AddSingleton(AudioManager.Current);
+		builder.Services.AddTransient <Destress>();
+		
 		return builder.Build();
 	}
 }
