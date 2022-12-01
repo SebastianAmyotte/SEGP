@@ -1,4 +1,5 @@
-
+//Primary author: Andrew Zarling
+//Reviewer: Andrew Zarling
 namespace SEGP.Pages;
 public partial class Profile : ContentPage
 {

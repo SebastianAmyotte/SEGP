@@ -6,6 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Author: https://firebase.google.com/docs/android/setup
+//Primary author: Andrew Zarling
+//Secondary author: Sebastian Amyotte
+//Reviewer: Andrew Zarling
+
+
 namespace SEGP.ViewModels
 {
     internal class RegisterViewModel : INotifyPropertyChanged

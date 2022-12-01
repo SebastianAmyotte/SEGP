@@ -8,6 +8,11 @@ using Firebase.Auth;
 using Newtonsoft.Json;
 using SEGP.Pages;
 
+//Author: https://firebase.google.com/docs/android/setup
+//Primary author: Andrew Zarling
+//Secondary author: Sebastian Amyotte
+//Reviewer: Andrew Zarling
+
 namespace SEGP.ViewModels
 {
     internal class LoginViewModel : INotifyPropertyChanged
