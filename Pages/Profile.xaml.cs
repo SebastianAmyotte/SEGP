@@ -1,9 +1,10 @@
 namespace SEGP.Pages;
-
 public partial class Profile : ContentPage
 {
+    
 	public Profile()
 	{
+        Notifications notificationsPage = new Notifications();
         InitializeComponent();
 	}
 

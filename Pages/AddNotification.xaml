@@ -6,20 +6,24 @@
     <VerticalStackLayout>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition />
 
             </Grid.ColumnDefinitions>
 
             <StackLayout Grid.Column="0">
                 <Label HorizontalOptions="End"
-                       Text="Time Interval:" FontSize="28" 
+                       Text="When:" FontSize="28"
                        Padding="10"
-                       WidthRequest="200"
                        Margin="0,0,25,0"/>
 
                 <Label HorizontalOptions="End"
                        Text="At:" FontSize="28" 
+                       Padding="10"
+                       Margin="0,0,25,0"/>
+
+                <Label HorizontalOptions="End"
+                       Text="Every:" FontSize="28" 
                        Padding="10"
                        Margin="0,0,25,0"/>
 
@@ -29,13 +33,6 @@
                        HorizontalTextAlignment="End"
                        WidthRequest="150"
                        HeightRequest="163"
-                       Margin="0,0,25,0"/>
-
-                <Label HorizontalOptions="End"
-                       Text="Notification Type:" FontSize="28" 
-                       Padding="10"
-                       HorizontalTextAlignment="End"
-                       WidthRequest="200"
                        Margin="0,0,25,0"/>
 
                 <Button Text="Schedule Notification" 
@@ -49,20 +46,32 @@
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
                         Margin="25,0,0,0">
-                    <Entry x:Name="interval" 
-                           FontSize="28" 
-                           Placeholder="Daily"
-                           WidthRequest="200"/>
+                    <DatePicker MinimumDate="01/01/2022"
+                                MaximumDate="12/31/2022"
+                                Date="12/01/2022" />
                 </Border>
 
                 <Border HorizontalOptions="Start"
                         Stroke="Black"
                         Padding="10"
                         Margin="25,0,0,0">
-                    <Entry x:Name="time" 
-                           FontSize="28" 
-                           Placeholder="16:30"
-                           WidthRequest="200"/>
+                    <TimePicker Time="5:00:00" />
+                </Border>
+
+                <Border HorizontalOptions="Start"
+                        Stroke="Black"
+                        Margin="25,0,0,0">
+                    <Picker x:Name="interval" SelectedIndex="1" WidthRequest="100">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Hour</x:String>
+                                <x:String>Day</x:String>
+                                <x:String>Week</x:String>
+                                <x:String>Month</x:String>
+                                <x:String>Year</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
                 </Border>
 
                 <Border HorizontalOptions="Start"
@@ -71,20 +80,11 @@
                     <Editor x:Name="text" 
                             Margin="10,0,10,0"
                             FontSize="24" 
-                            Placeholder="Enter text here"
+                            Placeholder="EnterText"
                             WidthRequest="200"
                             HeightRequest="200"/>
                 </Border>
-
-                <Border HorizontalOptions="Start"
-                        Stroke="Black"
-                        Margin="25,0,0,0">
-                    <Entry x:Name="type" 
-                           FontSize="24" 
-                           Placeholder="Vibration"
-                           WidthRequest="200"/>
-                </Border>
-
+                
                 <Button Text="Cancel" 
                         Clicked="OnCancelPressed"
                         WidthRequest="200"

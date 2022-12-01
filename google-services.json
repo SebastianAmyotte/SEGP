@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687528190164",
+    "project_id": "segp-8ca33",
+    "storage_bucket": "segp-8ca33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687528190164:android:3b4a009ee0ad169dd39b41",
+        "android_client_info": {
+          "package_name": "com.student"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687528190164-jo5gor67d47k85eie1qijasao183che9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0lL-pgsms3EEixNP1GE4EtdWTqdJbo7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687528190164-jo5gor67d47k85eie1qijasao183che9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

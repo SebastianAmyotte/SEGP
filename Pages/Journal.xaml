@@ -6,18 +6,18 @@
     <ScrollView>
     <StackLayout Orientation="Vertical">
         <FlexLayout JustifyContent="Center">
-            <ImageButton Source="arrowback.png" 
+                <ImageButton Source="arrowback.png" 
                  Clicked="OnBackButtonPressed"
                  HeightRequest="50"
                  Margin="0,0,25,0"/>
-            <Label Text="11/05/2022"
-                FontSize="32"
-                   x:Name="date"/>
-            <ImageButton Source="arrownext.png" 
+                <DatePicker x:Name="datePicker" FontSize="26" DateSelected="OnDatePickerChanged"/>
+                <ImageButton Source="arrownext.png" 
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"
                          Margin="25,0,0,0"/>
-        </FlexLayout>
+                
+            </FlexLayout>
+
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
             <Entry WidthRequest="50" x:Name="rating" FontSize="32" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>

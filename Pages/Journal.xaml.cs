@@ -1,3 +1,4 @@
+using System.Text.Json;
 namespace SEGP.Pages;
 
 public partial class Journal : ContentPage
@@ -9,6 +10,8 @@ public partial class Journal : ContentPage
     public Journal()
     {
         InitializeComponent();
+        datePicker.Date = currentDay;
+        datePicker.MaximumDate = currentDay;
         //TODO: Serialize dailyEntries, for now create blank entry
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
         UpdateCurrentEntry();
@@ -17,7 +20,16 @@ public partial class Journal : ContentPage
     void OnBackButtonPressed(object sender, EventArgs e)
     {
         currentDay = currentDay.AddDays(-1);
+        datePicker.Date = currentDay;
         LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
+        UpdateCurrentEntry();
+    }
+
+    void OnDatePickerChanged(object sender, EventArgs e)
+    {
+        DatePicker datePicker = (DatePicker)sender;
+        currentDay = datePicker.Date;
+        LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text);
         UpdateCurrentEntry();
     }
 
@@ -31,6 +43,7 @@ public partial class Journal : ContentPage
         }
         else
         {
+            datePicker.Date = currentDay;
             LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
             UpdateCurrentEntry();
         }
@@ -50,7 +63,6 @@ public partial class Journal : ContentPage
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
         //Update UI
-        date.Text = currentDay.ToShortDateString();
         rating.Text = currentDisplayedEntry.GetRating();
         dailyThoughts.Text = currentDisplayedEntry.GetEntry();
     }
@@ -94,15 +106,14 @@ public partial class Journal : ContentPage
             dailyThoughts.Text = currentDisplayedEntry.GetEntry();
         }
     }
-
-    void SerializeToDisk()
+    String SerializeToJson()
     {
-        //TODO
+        return JsonSerializer.Serialize(dailyEntries);
     }
 
-    void LoadSerializedFromDisk()
+    void LoadSerializedFromJson(String json)
     {
-        //TODO
+        dailyEntries = JsonSerializer.Deserialize<Dictionary<DateTime, JournalEntry>>(json); 
     }
 }
 

@@ -13,7 +13,8 @@
             <ImageButton Source="edit.png"
                 WidthRequest="25"
                 Clicked="OnEditImage"
-                VerticalOptions="End"/>
+                VerticalOptions="End"
+                IsVisible="False"/>
         </HorizontalStackLayout>
 
         <VerticalStackLayout HorizontalOptions="Center">

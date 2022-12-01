@@ -1,16 +1,18 @@
+using Plugin.LocalNotification;
+
 namespace SEGP.Pages;
 
 public partial class Notifications : ContentPage
 {
-	public Notifications()
-	{
-		InitializeComponent();
-	}
+    public Notifications()
+    {
+        InitializeComponent();
+    }
 
-	async void OnAddButtonPressed(object sender, EventArgs e)
-	{
-		await Navigation.PushAsync(new AddNotification());
-	}
+    async void OnAddButtonPressed(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddNotification());
+    }
 
     void OnDeleteButtonPressed(object sender, EventArgs e)
     {
