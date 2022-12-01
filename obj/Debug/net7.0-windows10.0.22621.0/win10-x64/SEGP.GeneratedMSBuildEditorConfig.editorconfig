@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.22621.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SEGP
+build_property.ProjectDir = C:\Users\bacon\source\repos\SEGP\
+
+[C:/Users/bacon/source/repos/SEGP/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/bacon/source/repos/SEGP/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/bacon/source/repos/SEGP/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/AddNotification.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.AddNotification.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AddNotification.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AddNotification.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Checklist.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Checklist.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Checklist.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Checklist.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/DestressPage/Destress.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressPage.Destress.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DestressPage\Destress.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DestressPage\Destress.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/DestressPage/DestressVideoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.DestressPage.DestressVideoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DestressPage\DestressVideoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DestressPage\DestressVideoPage.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Journal.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Journal.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Journal.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Journal.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Login.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Notifications.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Notifications.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Notifications.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Notifications.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Profile.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Profile.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Profile.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Profile.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Pages/Register.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Pages.Register.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Register.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Register.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/bacon/source/repos/SEGP/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
