@@ -1,31 +1,41 @@
+//Author: Choi Woo Sik
+//Reviewer : Choi Woo Sik
+
+using CommunityToolkit.Mvvm.ComponentModel;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
+using System.Reflection.PortableExecutable;
+using System.Collections.ObjectModel;
+
+
 namespace SEGP.Pages;
 
 public partial class Checklist : ContentPage
 {
 
-    Dictionary<DateTime, ChecklistEntry> dailyEntries;
+    Dictionary<DateTime, ChecklistEntry> checklistEntries;
     DateTime currentDay = DateTime.Today;
     ChecklistEntry currentDisplayedEntry;
     public Checklist()
 	{
 		InitializeComponent();
         DatesLBL.Text = currentDay.ToShortDateString();
-        dailyEntries = new Dictionary<DateTime, ChecklistEntry>();
+        checklistEntries = new Dictionary<DateTime, ChecklistEntry>();
         UpdateCurrentEntry();
     }
 
 
     void UpdateCurrentEntry()
-
     {
-        if (dailyEntries.ContainsKey(currentDay))
+        if (checklistEntries.ContainsKey(currentDay))
         {
-            currentDisplayedEntry = dailyEntries[currentDay];
+            currentDisplayedEntry = checklistEntries[currentDay];
         }
         else
         {
             currentDisplayedEntry = new ChecklistEntry("", currentDay);
-            dailyEntries.Add(currentDay, currentDisplayedEntry);
+            checklistEntries.Add(currentDay, currentDisplayedEntry);
         }
 
         currentDisplayedEntry.dates = currentDay;
@@ -41,18 +51,9 @@ public partial class Checklist : ContentPage
 
     void OnNextButtonPressed(object sender, EventArgs e)
     {
-
-        if (currentDay.AddDays(1) > DateTime.Now)
-        {
-            DisplayAlert("Error", "Tomorrow hasn't started yet!", "OK");
-          
-        }
-        else
-        {
-            currentDay = currentDay.AddDays(1);
-            DatesLBL.Text = currentDay.ToShortDateString();
-            UpdateCurrentEntry();
-        }
+        currentDay = currentDay.AddDays(1);
+        DatesLBL.Text = currentDay.ToShortDateString();
+        UpdateCurrentEntry();
 
     }
 
@@ -61,6 +62,11 @@ public partial class Checklist : ContentPage
         DisplayAlert("Deleted item", "Item deleted! (Not actually)", "OK");
     }
 
+    async void OnAddButtonPress(object sender, EventArgs e)
+    {
+        String addedList = await DisplayPromptAsync("Todo", "What's the task?", "OK");
+        currentDisplayedEntry.SetEntry(addedList);
+    }
     private void HandleCheck(object sender, EventArgs e)
     {
         CheckBox cb = sender as CheckBox;
@@ -76,10 +82,22 @@ public partial class Checklist : ContentPage
         CheckBox cb = sender as CheckBox;
       
     }
-} 
- 
+
+    public String SerializeToDB()
+    {
+        return JsonSerializer.Serialize(checklistEntries);
+    }
+
+    public void DeserializeFromDB()
+    {
+        checklistEntries = JsonSerializer.Deserialize<Dictionary<DateTime, ChecklistEntry>>(json);
+    }
+
+}
+
 public class ChecklistEntry
 {
+
     public String listEntry;
     public DateTime dates;
 
@@ -89,14 +107,16 @@ public class ChecklistEntry
         this.dates = dates;
     }
 
+ 
     public String GetEntry()
     {
         return listEntry;
     }
 
-    public void SaveEntry(String entry)
+
+    public void SetEntry(String listEntry)
     {
-        this.listEntry = entry;
+        this.listEntry = listEntry;
     }
 
 
