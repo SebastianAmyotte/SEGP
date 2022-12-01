@@ -5,6 +5,8 @@
              Title="Checklist">
     <StackLayout Orientation="Vertical">
         <FlexLayout JustifyContent="Center">
+
+            <!-- DateTime -->
             <ImageButton Source="arrowback.png" BackgroundColor="WhiteSmoke" Margin="0, 0, 15, 0"
                  Clicked="OnBackButtonPressed"
                  HeightRequest="50"/>
@@ -14,6 +16,12 @@
             <ImageButton Source="arrownext.png" BackgroundColor="WhiteSmoke" Margin="15, 0, 0, 0"
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"/>
+            
+            <!-- Add Entry -->
+            <ImageButton Source="addentry.png" Margin="20, 0, 0, 0" HorizontalOptions="Center"
+                 Clicked="OnAddButtonPress"
+                 HeightRequest="40"/>
+
         </FlexLayout>
         <VerticalStackLayout WidthRequest="450" >
             <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
@@ -23,31 +31,13 @@
                  Clicked="OnDeleteButtonPress"
                  HeightRequest="40"/>
             </HorizontalStackLayout>
-            <HorizontalStackLayout HorizontalOptions="Start" Margin="10"> 
-                <CheckBox Scale="1.5"/>
-                <Label Text="Research projects" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />
-                <ImageButton Source="delete.png" Margin="10, 0, 0, 0" HorizontalOptions="Center"
-                 Clicked="OnDeleteButtonPress"
-                 HeightRequest="40"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <CheckBox Scale="1.5"/>
-                <Label Text="Group project at CS club" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />
-                <ImageButton Source="delete.png" Margin="10, 0, 0, 0" HorizontalOptions="Center"
-                 Clicked="OnDeleteButtonPress"
-                 HeightRequest="40"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <CheckBox Scale="1.5"/>
-                <Label Text="Work on assignments" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />
-                <ImageButton Source="delete.png" Margin="10, 0, 0, 0" HorizontalOptions="Center"
-                 Clicked="OnDeleteButtonPress"
-                 HeightRequest="40"/>
-            </HorizontalStackLayout>
+            
+         
+
+
         </VerticalStackLayout>
     </StackLayout>
 </ContentPage>
-
     
     
     
