@@ -1,4 +1,4 @@
-//Primary author: Andrew Zarling
+//Primary author: Calvin Larson
 //Secondary author: Sebastian Amyotte
 using Firebase.Auth;
 using SEGP.ViewModels;

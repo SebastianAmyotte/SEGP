@@ -9,7 +9,6 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "SEGP/1.0": {
         "dependencies": {
-          "CommunityToolkit.Mvvm": "8.0.0",
           "FirebaseAuthentication.net": "3.7.2",
           "Microsoft.AspNetCore.JsonPatch": "7.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.0",
@@ -896,14 +895,6 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.39961"
-          }
-        }
-      },
-      "CommunityToolkit.Mvvm/8.0.0": {
-        "runtime": {
-          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.1"
           }
         }
       },
@@ -2215,13 +2206,6 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
-    },
-    "CommunityToolkit.Mvvm/8.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Jiu2g5WUdXRwzhJkHB+B4JBKP5A5+fp8xKiW/ZQo5PI+DruI7MbPEcK9K/Aw0YzTiWRuG6CBluzYIWN5Eo7BkQ==",
-      "path": "communitytoolkit.mvvm/8.0.0",
-      "hashPath": "communitytoolkit.mvvm.8.0.0.nupkg.sha512"
     },
     "FirebaseAuthentication.net/3.7.2": {
       "type": "package",

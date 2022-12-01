@@ -90,8 +90,7 @@ public partial class Checklist : ContentPage
 
     public void DeserializeFromDB()
     {
-        //checklistEntries = JsonSerializer.Deserialize<Dictionary<DateTime, ChecklistEntry>>(json);
-        //FIXME
+        checklistEntries = JsonSerializer.Deserialize<Dictionary<DateTime, ChecklistEntry>>(json);
     }
 
 }
