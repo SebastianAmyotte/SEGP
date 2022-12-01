@@ -1,3 +1,5 @@
+//Author: Sebastian Amyotte
+//Reviewer: Sebastian Amyotte
 using Plugin.Maui.Audio;
 
 namespace SEGP.Pages;

@@ -1,3 +1,5 @@
+//Author: Sebastian Amyotte
+//Reviewer: Sebastian Amyotte
 using System.Text.Json;
 namespace SEGP.Pages;
 

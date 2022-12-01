@@ -1,3 +1,4 @@
+
 namespace SEGP.Pages;
 public partial class Profile : ContentPage
 {
