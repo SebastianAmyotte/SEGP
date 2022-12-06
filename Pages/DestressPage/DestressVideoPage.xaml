@@ -6,9 +6,9 @@
              x:Class="SEGP.Pages.DestressVideoPage"
              Title="Destress">
     <Grid BackgroundColor="AntiqueWhite">
+
         
-        <Button BackgroundColor="White" Pressed="CountdownTapped"></Button>
-        <Image x:Name="backgroundImage" HeightRequest="1000"></Image>
+        <Image x:Name="backgroundImage" Aspect="AspectFit" HeightRequest="1000"></Image>
         <Label x:Name="ProgressButton" 
             Text=""
             FontSize="30"
@@ -24,6 +24,6 @@
 	        BackgroundColor="PaleTurquoise"
 	        HeightRequest="250"
 	        WidthRequest="250"/>
-        
+        <Button BackgroundColor="Transparent" Pressed="CountdownTapped"></Button>
     </Grid>
 </ContentPage>

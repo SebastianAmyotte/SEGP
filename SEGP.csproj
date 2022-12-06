@@ -120,4 +120,8 @@
 	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Backgrounds\" />
+	</ItemGroup>
+
 </Project>

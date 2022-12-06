@@ -18,7 +18,6 @@ public partial class Destress : ContentPage
     String[] listOfBackgrounds = new String[] {
         //Sounds go here (No extension!)
         "Ocean Waves",
-        "Ocean Waves 2"
     };
 
     public Destress(IAudioManager audioManager)
@@ -40,7 +39,7 @@ public partial class Destress : ContentPage
     async void StartDestressingButtonDebug(object sender, EventArgs e)
     {
         //Push page
-        await Navigation.PushAsync(new DestressVideoPage("30 seconds", "Ocean Waves", "ocean_waves", audioManager));
+        await Navigation.PushAsync(new DestressVideoPage("30 seconds", "Ocean Waves", "OceanWaves", audioManager));
     }
 
     async Task AsyncPushDestressPage() {

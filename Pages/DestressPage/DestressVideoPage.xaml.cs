@@ -27,7 +27,8 @@ public partial class DestressVideoPage : ContentPage
         base.OnAppearing();
         ProgressView.Drawable = _arcProgress;
         PlayAsync(soundRequest);
-        backgroundImage.Source = "Raw/Backgrounds/" + backgroundRequest + ".gif";
+        backgroundImage.Source = backgroundRequest.ToLower().Replace(" ","") + ".png";
+        System.Console.WriteLine(backgroundImage.Source);
         backgroundImage.WidthRequest = 1000;
     }
 
