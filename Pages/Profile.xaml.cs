@@ -7,6 +7,7 @@ public partial class Profile : ContentPage
 	{
         Notifications notificationsPage = new Notifications();
         InitializeComponent();
+        Navigation.PushAsync(new Login());
 	}
 
     void OnEditImage(object sender, EventArgs e)

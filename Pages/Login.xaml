@@ -3,7 +3,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP.Pages.Login"
-             Title="Login">
+             Title="Login"
+             Shell.TabBarIsVisible="False"><!--prevents user from switching tabs-->
+
+    <!--prevents user from going back-->
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
+    
     <Grid>
         <StackLayout>
             <Label Margin="5,5" Text="Email:" FontSize="32" />

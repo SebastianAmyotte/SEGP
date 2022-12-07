@@ -24,6 +24,12 @@ public partial class Login : ContentPage
         await Navigation.PopAsync();
     }
 
+    //Code chunk to display an alert if user tries to leave login page
+    /*async void OnBackButtonPressed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Please Login", "You must login to use the app", "OK");
+    }*/
+
     void OnForgotPasswordClicked(object sender, EventArgs e)
     {
 
