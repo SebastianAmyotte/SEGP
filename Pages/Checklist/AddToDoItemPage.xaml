@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Primary author: Sebastian Amyotte-->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.AddToDoItemPage"
+             Title="AddToDoItemPage">
+    <VerticalStackLayout>
+        <StackLayout>
+            <Border Margin="5">
+                <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
+                    <Label Text="Todo Item: " VerticalOptions="Center" Margin="5" FontSize="22"/>
+                    <Entry x:Name="ToDoItemTextEntry" Placeholder="Enter todo item..." FontSize="15" WidthRequest="225">
+                        <Entry.Keyboard>
+                            <Keyboard x:FactoryMethod="Create">
+                                <x:Arguments>
+                                    <KeyboardFlags>All</KeyboardFlags>
+                                </x:Arguments>
+                            </Keyboard>
+                        </Entry.Keyboard>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Border>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button Text="Add" 
+                        Clicked="OnAddToDoItemPressed"
+                        WidthRequest="100"
+                        FontSize="22"
+                        Margin="5"/>
+                <Button Text="Cancel" 
+                        Clicked="OnCancelPressed"
+                        WidthRequest="100"
+                        FontSize="22"
+                        Margin="5"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Author: Sebastian Amyotte -->
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP.Pages.Checklist"
+             Title="Checklist">
+    <StackLayout Orientation="Vertical">
+        <FlexLayout JustifyContent="Center">
+
+            <!-- DateTime -->
+            <ImageButton Source="arrowback.png" BackgroundColor="WhiteSmoke" Margin="0, 0, 15, 0"
+                 Clicked="OnBackButtonPressed"
+                 HeightRequest="50"/>
+            <DatePicker x:Name="datePicker" FontSize="26" DateSelected="OnDatePickerChanged"/>
+            <ImageButton Source="arrownext.png" BackgroundColor="WhiteSmoke" Margin="15, 0, 0, 0"
+                 Clicked="OnNextButtonPressed"
+                 HeightRequest="50"/>
+        </FlexLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <VerticalStackLayout>
+                <ListView x:Name="ToDoList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border StrokeThickness="2" Stroke="Black" Padding="2">
+                                    <HorizontalStackLayout>
+                                        <CheckBox IsChecked="{Binding IsCompleted}" HorizontalOptions="Start"/>
+                                        <Label FontSize="18" Text="{Binding ToDoItemName}" VerticalOptions="Center"/>
+                                    </HorizontalStackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <HorizontalStackLayout HorizontalOptions="End">
+                    <ImageButton
+                     HorizontalOptions="End" 
+                     Margin="10"
+                     Source="addcircle.png"
+                     Clicked="OnAddToDoItemButtonPressed"
+                     HeightRequest="50"/>
+                    <ImageButton
+                     HorizontalOptions="End" 
+                     Margin="10"
+                     Source="delete.png"
+                     Clicked="OnDeleteButtonPress"
+                     HeightRequest="50"/>
+                    <ImageButton
+                     HorizontalOptions="End" 
+                     Margin="10"
+                     Source="checklist.png"
+                     Clicked="AllToDoItems"
+                     HeightRequest="50"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </ScrollView>
+        
+    </StackLayout>
+</ContentPage>
+    
+    
+    

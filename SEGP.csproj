@@ -30,6 +30,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
 		<PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
@@ -66,6 +67,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\Checklist\AddToDoItemPage.xaml.cs">
+	    <DependentUpon>AddToDoItemPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Pages\Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
@@ -87,13 +91,13 @@
 	  <MauiXaml Update="Pages\AddNotification.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\Checklist\AddToDoItemPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\destresspage\NewContent1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\DestressVideoPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\NewPage1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Notifications.xaml">

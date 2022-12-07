@@ -6,8 +6,6 @@
              x:Class="SEGP.Pages.DestressVideoPage"
              Title="Destress">
     <Grid BackgroundColor="AntiqueWhite">
-
-        
         <Image x:Name="backgroundImage" Aspect="AspectFit" HeightRequest="1000"></Image>
         <Label x:Name="ProgressButton" 
             Text=""
