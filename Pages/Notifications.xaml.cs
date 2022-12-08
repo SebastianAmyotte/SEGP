@@ -1,7 +1,6 @@
 //Primary author: Calvin Larson
 //Reviewer: Calvin Larson
 using Plugin.LocalNotification;
-
 namespace SEGP.Pages;
 
 public partial class Notifications : ContentPage

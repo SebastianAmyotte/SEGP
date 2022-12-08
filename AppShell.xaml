@@ -4,11 +4,24 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SEGP"
+    xmlns:pages="clr-namespace:SEGP.Pages"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar x:Name="Tabs">
+        <Tab Title="Profile" Icon="accountico.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Profile}"/>
+        </Tab>
+        <Tab Title="Notifications" Icon="notifications.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Notifications}"/>
+        </Tab>
+        <Tab Title="Destress" Icon="heart.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Destress}"/>
+        </Tab>
+        <Tab Title="Checklist" Icon="checklist.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Checklist}"/>
+        </Tab>
+        <Tab Title="Journal" Icon="journal.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Journal}"/>
+        </Tab>
+    </TabBar>
 </Shell>

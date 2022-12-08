@@ -715,6 +715,9 @@
     <AppxPackagedFile Include="C:\Users\Nice\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.27\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nice\.nuget\packages\communitytoolkit.mvvm\8.0.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nice\.nuget\packages\firebaseauthentication.net\3.7.2\lib\netstandard1.1\Firebase.Auth.dll">
       <PackagePath>Firebase.Auth.dll</PackagePath>
     </AppxPackagedFile>
@@ -1071,6 +1074,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Nice\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\notifications.scale-100.png">
       <PackagePath>notifications.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Nice\Documents\GitHub\SEGP\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\oceanwaves.scale-100.png">
+      <PackagePath>oceanwaves.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

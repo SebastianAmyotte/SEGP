@@ -70,7 +70,7 @@
 	  <Compile Update="Pages\Checklist\AddToDoItemPage.xaml.cs">
 	    <DependentUpon>AddToDoItemPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\Login.xaml.cs">
+	  <Compile Update="Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Register.xaml.cs">
@@ -103,7 +103,7 @@
 	  <MauiXaml Update="Pages\Notifications.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-	  <MauiXaml Update="Pages\Login.xaml">
+	  <MauiXaml Update="Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Register.xaml">

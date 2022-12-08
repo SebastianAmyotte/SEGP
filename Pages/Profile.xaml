@@ -19,16 +19,8 @@
         </HorizontalStackLayout>
 
         <VerticalStackLayout HorizontalOptions="Center">
-            
-                <Button x:Name="LoginBtn"
-                    Text="Login"
-                    Clicked="OnLoginClicked"
-                    MaximumHeightRequest="50"
-                    WidthRequest="250"
-                    FontSize="22"
-                    Margin="20"/>
-                <Button x:Name="LogoutBtn" 
-                    Text="Logout"
+            <Button x:Name="LogoutBtn" 
+                    Text="Logout and quit"
                     Clicked="OnLogoutClicked"
                     MaximumHeightRequest="50"
                     WidthRequest="250"

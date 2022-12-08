@@ -21,7 +21,7 @@
     <MauiXaml Update="Pages\Checklist\AddToDoItemPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Pages\Login.xaml">
+    <MauiXaml Update="Login.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Pages\Register.xaml">
