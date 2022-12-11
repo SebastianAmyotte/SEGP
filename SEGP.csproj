@@ -32,6 +32,7 @@
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 		<PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+		<PackageReference Include="FirebaseDatabase.net" Version="4.1.0" />
 		<PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
@@ -70,7 +71,7 @@
 	  <Compile Update="Pages\Checklist\AddToDoItemPage.xaml.cs">
 	    <DependentUpon>AddToDoItemPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\Login.xaml.cs">
+	  <Compile Update="Login.xaml.cs">
 	    <DependentUpon>Login.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Pages\Register.xaml.cs">
@@ -103,7 +104,7 @@
 	  <MauiXaml Update="Pages\Notifications.xaml">
       <Generator>MSBuild:Compile</Generator>
     </MauiXaml>
-	  <MauiXaml Update="Pages\Login.xaml">
+	  <MauiXaml Update="Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\Register.xaml">

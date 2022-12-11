@@ -6,15 +6,14 @@
              Title="Journal">
     <StackLayout Orientation="Vertical">
         <FlexLayout JustifyContent="Center">
-            <ImageButton Source="arrowback.png" 
+            <ImageButton Source="arrowback.png"  BackgroundColor="WhiteSmoke" Margin="0, 0, 15, 0"
                  Clicked="OnBackButtonPressed"
-                 HeightRequest="50"
-                 Margin="0,0,25,0"/>
+                 HeightRequest="50"/>
             <DatePicker x:Name="datePicker" FontSize="26" DateSelected="OnDatePickerChanged"/>
             <ImageButton Source="arrownext.png" 
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"
-                         Margin="25,0,0,0"/>
+                 BackgroundColor="WhiteSmoke" Margin="0, 0, 15, 0"/>
 
         </FlexLayout>
 

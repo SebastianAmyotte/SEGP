@@ -71,7 +71,7 @@ namespace SEGP.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
-                throw;
+                
             }
         }
     }

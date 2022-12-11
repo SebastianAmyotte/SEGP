@@ -61,15 +61,12 @@ namespace SEGP.ViewModels
                 var content = await auth.GetFreshAuthAsync();
                 var serializedContent = JsonConvert.SerializeObject(content);
                 Preferences.Set("FreshFirebaseToken", serializedContent);
-                await this._navigation.PushAsync(new Profile());
+                await this._navigation.PushModalAsync(new AppShell());
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
-                throw;
             }
-
-
         }
 
         private async void RegisterBtnTappedAsync(object obj)

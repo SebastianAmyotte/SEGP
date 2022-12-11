@@ -19,9 +19,9 @@ public partial class Profile : ContentPage
 	{
        await Navigation.PushAsync(new Login());
     }
-   void OnLogoutClicked(object sender, EventArgs e)
+   async void OnLogoutClicked(object sender, EventArgs e)
     {
-        //logs out user
+        Application.Current.Quit();
     }
     void OnBackupClicked(object sender, EventArgs e)
     {
