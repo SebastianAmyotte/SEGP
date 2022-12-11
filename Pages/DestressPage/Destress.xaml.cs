@@ -13,11 +13,20 @@ public partial class Destress : ContentPage
     String[] listOfSounds = new String[] {
         //Sounds go here (No extension!)
         "Ocean Waves",
+        "Light Rain Under Tarp",
+        "Rolling Thunder and Rain",
+        "Windy Day",
+        "Desert Wind",
     };
 
     String[] listOfBackgrounds = new String[] {
         //Sounds go here (No extension!)
         "Ocean Waves",
+        "Ocean Waves 2",
+        "Cloudy",
+        "Desert Sand",
+        "Rain",
+        "Thunder",
     };
 
     public Destress(IAudioManager audioManager)
