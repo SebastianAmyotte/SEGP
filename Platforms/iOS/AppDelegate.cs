@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SEGP;
+namespace SEGP7;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

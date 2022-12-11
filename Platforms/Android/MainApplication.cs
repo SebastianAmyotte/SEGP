@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SEGP;
+namespace SEGP7;
 
 [Application]
 public class MainApplication : MauiApplication

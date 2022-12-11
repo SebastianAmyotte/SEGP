@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace SEGP;
+namespace SEGP7;
 
 class Program : MauiApplication
 {

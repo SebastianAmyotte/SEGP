@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace SEGP;
+namespace SEGP7;
 
 public class Program
 {
