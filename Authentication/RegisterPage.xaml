@@ -21,7 +21,6 @@ Passwords are case sensitive, can include symbols, and can be up to 25 character
                 <Button Text="Register" Command="{Binding RegisterUser}" WidthRequest="150" Margin="25"/>
                 <Button Text="Cancel" Clicked="CancelRegisterButtonPushed" WidthRequest="150" Margin="25"/>
             </HorizontalStackLayout>
-
         </StackLayout>
     </Grid>
 </ContentPage>

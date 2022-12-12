@@ -14,12 +14,15 @@ public partial class JournalPage : ContentPage
 
     public JournalPage()
     {
+        Console.WriteLine($"Page tapped: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
         LoadFromDatabase();
         InitializeComponent();
+        Console.WriteLine($"Initialized: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
         UpdateCurrentEntry();
         datePicker.Date = currentDay;
         datePicker.MaximumDate = currentDay;
+        
     }
 
     void OnBackButtonPressed(object sender, EventArgs e)
@@ -123,6 +126,14 @@ public partial class JournalPage : ContentPage
             dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(result);
             UpdateCurrentEntry();
         });
+        Console.WriteLine($"Before broadcasting: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
         MessagingCenter.Send("LoadJournal", "LoadJournal");
+        Console.WriteLine($"After broadcasting: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
+        
+    }
+
+    async void TestASync()
+    {
+       
     }
 }
