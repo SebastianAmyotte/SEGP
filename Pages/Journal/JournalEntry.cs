@@ -1,4 +1,8 @@
-﻿public class JournalEntry
+﻿using CommunityToolkit.Mvvm.Messaging;
+using Firebase.Auth;
+using SEGP7;
+
+public class JournalEntry
 {
     String entry;
     String rating;
@@ -28,4 +32,6 @@
     {
         this.rating = rating;
     }
+
+    
 }

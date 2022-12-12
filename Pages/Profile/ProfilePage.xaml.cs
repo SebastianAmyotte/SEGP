@@ -1,12 +1,21 @@
 namespace SEGP7.Pages;
+
+using global::Firebase.Auth;
 using SEGP7.Authentication;
 
-public partial class Profile : ContentPage
+public partial class ProfilePage : ContentPage
 {
-	public Profile()
+    FirebaseAuthLink currentCredentials;
+	public ProfilePage()
 	{
-		InitializeComponent();
-	}
+        MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
+        {
+            currentCredentials = newCredentials;
+        });
+        MessagingCenter.Send("", "SendCredentials");
+        InitializeComponent();
+        Username.Text = currentCredentials.User.Email;
+    }
 
     public void OnLogoutButtonPressed(object sender, EventArgs e)
     {
@@ -15,6 +24,7 @@ public partial class Profile : ContentPage
 
     public void OnChangePasswordButtonPressed(object sender, EventArgs e)
     {
+        
     }
     public void OnDeleteAccountButtonPressed(object sender, EventArgs e)
     {

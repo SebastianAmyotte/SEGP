@@ -1,9 +1,13 @@
+using Firebase.Auth;
+using SEGP7.Pages;
 namespace SEGP7;
 
 public partial class TabbedNavigation : Shell
 {
-	public TabbedNavigation()
+    public FirebaseAuthLink userCredentials;
+
+    public TabbedNavigation(FirebaseAuthLink userCredentials)
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+    }
 }

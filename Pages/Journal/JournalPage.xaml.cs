@@ -1,3 +1,6 @@
+using CommunityToolkit.Mvvm.Messaging;
+using Firebase.Auth;
+
 namespace SEGP7.Pages;
 
 public partial class JournalPage : ContentPage
@@ -5,9 +8,15 @@ public partial class JournalPage : ContentPage
     Dictionary<DateTime, JournalEntry> dailyEntries;
     DateTime currentDay = DateTime.Today;
     JournalEntry currentDisplayedEntry;
+    FirebaseAuthLink currentUser;
 
     public JournalPage()
     {
+        MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
+        {
+            currentUser = newCredentials;
+        });
+        MessagingCenter.Send("", "SendCredentials");
         InitializeComponent();
         datePicker.Date = currentDay;
         datePicker.MaximumDate = currentDay;

@@ -1,9 +1,13 @@
-﻿using Microsoft.Maui.Platform;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using Firebase.Auth;
+using Microsoft.Maui.Platform;
+using SEGP7.Firebase;
 
 namespace SEGP7.Authentication;
 
 public partial class LoginPage : ContentPage
 {
+    FirebaseAuthenticationController authController = new FirebaseAuthenticationController(); 
     public LoginPage()
     {
         InitializeComponent();
@@ -11,7 +15,8 @@ public partial class LoginPage : ContentPage
 
     private void LoginUserButtonPushed(object sender, EventArgs e)
     {
-        Application.Current.MainPage = new TabbedNavigation();
+        authController.LoginUser(UserEmail.Text, UserPassword.Text);
+        PushLoggedInPage();
     }
 
     private void RegisterUserButtonPushed(object sender, EventArgs e)
@@ -28,5 +33,10 @@ public partial class LoginPage : ContentPage
     {
         //Quit the app
         Application.Current.Quit();
+    }
+
+    private void PushLoggedInPage()
+    {
+        Application.Current.MainPage = new TabbedNavigation(authController.getCurrentUser());
     }
 }

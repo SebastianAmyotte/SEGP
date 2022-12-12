@@ -6,7 +6,7 @@
              Title="Tabs">
     <TabBar x:Name="Tabs">
         <Tab Title="Profile" Icon="accountico.png">
-            <ShellContent ContentTemplate="{DataTemplate pages:Profile}"/>
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage}"/>
         </Tab>
         <Tab Title="Notifications" Icon="notifications.png">
             <ShellContent ContentTemplate="{DataTemplate pages:NotificationsPage}"/>
