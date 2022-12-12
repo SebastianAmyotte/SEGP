@@ -4,15 +4,13 @@ using SEGP7;
 
 public class JournalEntry
 {
-    String entry;
-    String rating;
-    DateTime date;
+    public String entry;
+    public String rating;
 
-    public JournalEntry(String entry, String rating, DateTime date)
+    public JournalEntry(String entry, String rating)
     {
         this.entry = entry;
         this.rating = rating;
-        this.date = date;
     }
 
     public String GetEntry()

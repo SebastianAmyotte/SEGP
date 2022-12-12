@@ -2,7 +2,7 @@
 using Plugin.Maui.Audio;
 using SEGP7.Pages;
 using SEGP7.Firebase;
-using CommunityToolkit.Maui;
+using CommunityToolkit;
 
 namespace SEGP7;
 
@@ -13,7 +13,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseMauiCommunityToolkit()
+			//.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

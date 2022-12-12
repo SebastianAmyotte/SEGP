@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Messaging;
-
 using Firebase.Auth;
 
 namespace SEGP7.Firebase
@@ -41,7 +40,6 @@ namespace SEGP7.Firebase
             currentLoggedInUser = authProvider.SignInWithEmailAndPasswordAsync(email, password).Result;
             return currentLoggedInUser != null;
         }
-
 
         //Reset password
         public async void ResetPassword(String email)

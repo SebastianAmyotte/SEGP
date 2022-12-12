@@ -1,5 +1,8 @@
 using CommunityToolkit.Mvvm.Messaging;
 using Firebase.Auth;
+using Newtonsoft.Json;
+using SEGP7.Tools;
+using System.Text;
 
 namespace SEGP7.Pages;
 
@@ -8,20 +11,15 @@ public partial class JournalPage : ContentPage
     Dictionary<DateTime, JournalEntry> dailyEntries;
     DateTime currentDay = DateTime.Today;
     JournalEntry currentDisplayedEntry;
-    FirebaseAuthLink currentUser;
 
     public JournalPage()
     {
-        MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
-        {
-            currentUser = newCredentials;
-        });
-        MessagingCenter.Send("", "SendCredentials");
+        LoadFromDatabase();
         InitializeComponent();
-        datePicker.Date = currentDay;
-        datePicker.MaximumDate = currentDay;
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
         UpdateCurrentEntry();
+        datePicker.Date = currentDay;
+        datePicker.MaximumDate = currentDay;
     }
 
     void OnBackButtonPressed(object sender, EventArgs e)
@@ -66,7 +64,7 @@ public partial class JournalPage : ContentPage
         }
         else
         {
-            currentDisplayedEntry = new JournalEntry("", "", currentDay);
+            currentDisplayedEntry = new JournalEntry("", "");
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
         //Update UI
@@ -97,7 +95,9 @@ public partial class JournalPage : ContentPage
     {
         currentDisplayedEntry.SaveEntry(dailyThoughts.Text);
         currentDisplayedEntry.SaveRating(rating.Text);
+
         DisplayAlert("Saved", "Journal entry saved", "OK");
+        SaveToDatabase();
     }
 
     async void OnRevertButtonPressed(object sender, EventArgs e)
@@ -108,5 +108,21 @@ public partial class JournalPage : ContentPage
             rating.Text = currentDisplayedEntry.GetRating();
             dailyThoughts.Text = currentDisplayedEntry.GetEntry();
         }
+    }
+
+    void SaveToDatabase()
+    {
+        String js = new Serializer().Serialize(dailyEntries);
+        MessagingCenter.Send(js, "SaveJournal");
+    }
+
+    void LoadFromDatabase()
+    {
+        MessagingCenter.Subscribe<String>(this, "SendLoadedJournal", (result) =>
+        {
+            dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(result);
+            UpdateCurrentEntry();
+        });
+        MessagingCenter.Send("LoadJournal", "LoadJournal");
     }
 }
