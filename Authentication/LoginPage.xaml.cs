@@ -2,6 +2,7 @@
 using Firebase.Auth;
 using Microsoft.Maui.Platform;
 using SEGP7.Firebase;
+using SEGP7.ViewModels;
 
 namespace SEGP7.Authentication;
 
@@ -19,6 +20,7 @@ public partial class LoginPage : ContentPage
         PushLoggedInPage();
     }
 
+    
     private void RegisterUserButtonPushed(object sender, EventArgs e)
     {
         Navigation.PushAsync(new RegisterPage());

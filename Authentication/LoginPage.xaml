@@ -15,7 +15,7 @@
             </Border>
             <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
                 <Button Text="Login" WidthRequest="150" Clicked="LoginUserButtonPushed" Margin="10" />
-                <Button Text="Register" Clicked="RegisterUserButtonPushed" WidthRequest="150" Margin="10"/>
+                <Button Text="Register" Clicked="RegisterUserButtonPushed" WidthRequest="150" Margin="25"/>
                 <Button Text="Forgot Password?" Clicked="ForgotPasswordButtonPushed" WidthRequest="150" Margin="10"/>
                 <Button Text="Quit" Clicked="QuitButtonPushed" WidthRequest="150" Margin="10"/>
             </VerticalStackLayout>
