@@ -65,9 +65,9 @@ public partial class ChecklistPage : ContentPage
         UpdateCurrentChecklist();
     }
 
-    private void AddToDoItemButtonPressed(object sender, EventArgs e)
+    private async void AddToDoItemButtonPressed(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new AddChecklistItemPage(todaysChecklistEntries));
+        await Navigation.PushAsync(new AddChecklistItemPage(todaysChecklistEntries));
     }
 
     private async void DeleteChecklistButtonPressed(object sender, EventArgs e)

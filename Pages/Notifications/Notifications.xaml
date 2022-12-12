@@ -3,37 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP7.Pages.NotificationsPage"
              Title="Notifications">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <VerticalStackLayout Grid.Row="0" Grid.Column="0" WidthRequest="450">
-            <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <Border Stroke="Black" Padding="0,10,10,10"  WidthRequest="450">
-                    <Label Text="De-stress 6:30pm Vibration" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />
-                </Border>
-                <ImageButton Source="delete.png" Margin="10, 0, 0, 0" HorizontalOptions="Center"
-                     Clicked="OnDeleteButtonPressed"
-                     HeightRequest="40"/>
-            </HorizontalStackLayout>
-            <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <Border  Stroke="Black" Padding="0,10,10,10" WidthRequest="450">
-                    <Label Text="Do homework 7:00pm Silent" Margin="10,0,0,0" FontSize="22" VerticalOptions="Center" />
-                </Border>
-                <ImageButton Source="delete.png" Margin="10, 0, 0, 0" HorizontalOptions="Center"
-                     Clicked="OnDeleteButtonPressed"
-                     HeightRequest="40"/>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
-        <ImageButton Grid.Row="1" Grid.Column="0"
+
+    <ScrollView VerticalOptions="FillAndExpand">
+        <VerticalStackLayout>
+            <ListView x:Name="NotificationsList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border StrokeThickness="2" Stroke="Black" Padding="2">
+                                <HorizontalStackLayout>
+                                    <Label FontSize="18" Text="{Binding NotificationName}" VerticalOptions="Center"/>
+                                </HorizontalStackLayout>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- Floating action buttons-->
+            <HorizontalStackLayout HorizontalOptions="End">
+                <ImageButton
                      HorizontalOptions="End" 
-                     Margin="25"
+                     Margin="10"
                      Source="addcircle.png"
                      Clicked="OnAddButtonPressed"
                      HeightRequest="50"/>
-    </Grid>
+                <ImageButton
+                     HorizontalOptions="End" 
+                     Margin="10"
+                     Source="delete.png"
+                     Clicked="OnDeleteButtonPressed"
+                     HeightRequest="50"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </ScrollView>
 </ContentPage>

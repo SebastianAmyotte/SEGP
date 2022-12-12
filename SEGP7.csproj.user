@@ -3,9 +3,9 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net7.0-android</ActiveDebugFramework>
-    <ActiveDebugProfile>Samsung SM-S908U (Android 13.0 - API 33)</ActiveDebugProfile>
+    <ActiveDebugProfile>Samsung SM-S506DL (Android 11.0 - API 30)</ActiveDebugProfile>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
-    <DefaultDevice>pixel_5_-_api_32</DefaultDevice>
+    <DefaultDevice>Pixel_5_API_31</DefaultDevice>
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="Authentication\RegisterPage.xaml">
