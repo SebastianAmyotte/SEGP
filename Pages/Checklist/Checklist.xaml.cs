@@ -1,4 +1,5 @@
-//Author: Sebastian Amyotte
+//Primary Author : Woo Sik Choi
+//Reviewer: Sebastian Amyotte
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -87,8 +88,8 @@ public partial class Checklist : ContentPage
 
     public void DeserializeFromDB()
     {
-        //checklistEntries = JsonSerializer.Deserialize<Dictionary<DateTime, ChecklistEntry>>(json);
-        //FIXME
+        //checklistEntries = JsonSerializer.Dictionary<DateTime, ObservableCollection<ChecklistEntry>>();;
+        //needs to be tested 
     }
 
     async public void AllToDoItems(object sender, EventArgs e)

@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿//Primary Author : Woo Sik Choi
+//Reviewer: Sebastian Amyotte
+using CommunityToolkit.Mvvm.ComponentModel;
 
 public class ChecklistEntry : ObservableObject
 {
