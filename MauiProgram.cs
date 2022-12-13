@@ -21,7 +21,6 @@ public static class MauiProgram
 			});
         builder.Services.AddSingleton(AudioManager.Current);
         builder.Services.AddTransient<DestressPage>();
-        builder.Services.AddSingleton<FirebaseAuthenticationController>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

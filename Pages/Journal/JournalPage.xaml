@@ -14,12 +14,24 @@
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"
                  Margin="15, 0, 0, 0"/>
-
         </FlexLayout>
-
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Label Text="Today's Rating:" FontSize="32" Padding="10"/>
-            <Entry VerticalTextAlignment="Center" HorizontalTextAlignment="Center" WidthRequest="50" x:Name="rating" FontSize="28" Keyboard="Numeric" MaxLength="1" Placeholder="1-5"/>
+            <Label Text="Today's Rating:" FontSize="32" Padding="10"
+                   VerticalTextAlignment="Center"/>
+            <Picker x:Name="ratingPicker"
+                    Title="1-5" FontSize="38"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1</x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
         </HorizontalStackLayout>
         <Border Margin="10,10,10,0"
                 Stroke="Black">
@@ -30,13 +42,7 @@
                         AutoSize="TextChanges"
                         HeightRequest = "225"
                         x:Name="dailyThoughts">
-                <Editor.Keyboard>
-                    <Keyboard x:FactoryMethod="Create">
-                        <x:Arguments>
-                            <KeyboardFlags>All</KeyboardFlags>
-                        </x:Arguments>
-                    </Keyboard>
-                </Editor.Keyboard>
+                
             </Editor>
         </Border>
         <HorizontalStackLayout HorizontalOptions="Center">

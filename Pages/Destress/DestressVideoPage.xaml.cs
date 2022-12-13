@@ -33,6 +33,15 @@ public partial class DestressVideoPage : ContentPage
         backgroundImage.WidthRequest = 1000;
     }
 
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        if (player != null)
+        {
+            player.Stop();
+        }
+    }
+
     async void PlayAsync(string fileName)
     {
         player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync($"Sounds/{fileName}.mp3"));

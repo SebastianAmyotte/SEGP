@@ -14,22 +14,33 @@ public partial class JournalPage : ContentPage
 
     public JournalPage()
     {
-        Console.WriteLine($"Page tapped: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
-        LoadFromDatabase();
-        InitializeComponent();
-        Console.WriteLine($"Initialized: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
+        
+        InitializeComponent();
         UpdateCurrentEntry();
         datePicker.Date = currentDay;
         datePicker.MaximumDate = currentDay;
-        
     }
 
-    void OnBackButtonPressed(object sender, EventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        try
+        {
+            LoadFromDisk();
+        }
+        catch (Exception e)
+        {
+
+        }
+        UpdateCurrentEntry();
+    }
+
+        void OnBackButtonPressed(object sender, EventArgs e)
     {
         currentDay = currentDay.AddDays(-1);
         datePicker.Date = currentDay;
-        LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
+        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text); //Await Async
         UpdateCurrentEntry();
     }
 
@@ -37,7 +48,7 @@ public partial class JournalPage : ContentPage
     {
         DatePicker datePicker = (DatePicker)sender;
         currentDay = datePicker.Date;
-        LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text);
+        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text);
         UpdateCurrentEntry();
     }
 
@@ -52,7 +63,7 @@ public partial class JournalPage : ContentPage
         else
         {
             datePicker.Date = currentDay;
-            LookForUnsavedWorkAsync(currentDisplayedEntry, rating.Text, dailyThoughts.Text); //Await Async
+            LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text); //Await Async
             UpdateCurrentEntry();
         }
 
@@ -71,8 +82,8 @@ public partial class JournalPage : ContentPage
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
         //Update UI
-        rating.Text = currentDisplayedEntry.GetRating();
         dailyThoughts.Text = currentDisplayedEntry.GetEntry();
+        ratingPicker.SelectedItem = currentDisplayedEntry.GetRating();
     }
 
     async void LookForUnsavedWorkAsync(JournalEntry currentJournal, String rating, String dailyThoughts)
@@ -97,10 +108,9 @@ public partial class JournalPage : ContentPage
     void OnSaveButtonPressed(object sender, EventArgs e)
     {
         currentDisplayedEntry.SaveEntry(dailyThoughts.Text);
-        currentDisplayedEntry.SaveRating(rating.Text);
-
+        currentDisplayedEntry.SaveRating((String)ratingPicker.SelectedItem);
+        SaveToDisk();
         DisplayAlert("Saved", "Journal entry saved", "OK");
-        SaveToDatabase();
     }
 
     async void OnRevertButtonPressed(object sender, EventArgs e)
@@ -108,32 +118,20 @@ public partial class JournalPage : ContentPage
         bool response = await DisplayAlert("Discard?", "Are you sure you want to discard your changes?", "Discard", "Keep");
         if (response)
         {
-            rating.Text = currentDisplayedEntry.GetRating();
+            ratingPicker.SelectedItem = currentDisplayedEntry.GetRating();
             dailyThoughts.Text = currentDisplayedEntry.GetEntry();
         }
     }
 
-    void SaveToDatabase()
+    void SaveToDisk()
     {
-        String js = new Serializer().Serialize(dailyEntries);
-        MessagingCenter.Send(js, "SaveJournal");
+        DiskIO diskIO = new DiskIO("journal.txt");
+        diskIO.WriteToFile(new Serializer().Serialize(dailyEntries));
     }
-
-    void LoadFromDatabase()
+    void LoadFromDisk()
     {
-        MessagingCenter.Subscribe<String>(this, "SendLoadedJournal", (result) =>
-        {
-            dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(result);
-            UpdateCurrentEntry();
-        });
-        Console.WriteLine($"Before broadcasting: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
-        MessagingCenter.Send("LoadJournal", "LoadJournal");
-        Console.WriteLine($"After broadcasting: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
-        
-    }
-
-    async void TestASync()
-    {
-       
+        DiskIO diskIO = new DiskIO("journal.txt");
+        String result = diskIO.ReadFromFile();
+        dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(result);
     }
 }

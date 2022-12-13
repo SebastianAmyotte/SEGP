@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP7.Pages.ProfilePage"
              Title="Profile">
+
     <ScrollView>
         <StackLayout VerticalOptions="Start" Padding="25">
             <VerticalStackLayout HorizontalOptions="Center">
@@ -17,7 +18,13 @@
                    Text="Loading..."
                    FontSize="18"
                    Margin="0,0,0,20"/>
-
+                <Button x:Name="BackupRestoreButton" 
+                    Text="Backup and Restore"
+                    Clicked="BackupAndRestoreButtonPresssed"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"/>
                 <Button x:Name="LogoutButton" 
                     Text="Logout"
                     Clicked="OnLogoutButtonPressed"
@@ -32,9 +39,16 @@
                     WidthRequest="250"
                     FontSize="22"
                     Margin="20"/>
-                <Button x:Name="DeleteAccountButton" 
+                <Button  
                     Text="Delete account"
                     Clicked="OnDeleteAccountButtonPressed"
+                    MaximumHeightRequest="50"
+                    WidthRequest="250"
+                    FontSize="22"
+                    Margin="20"/>
+                <Button  
+                    Text="Quit app"
+                    Clicked="OnQuitButtonPressed"
                     MaximumHeightRequest="50"
                     WidthRequest="250"
                     FontSize="22"

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SEGP7.Pages.BackupAndRestorePage"
+             NavigationPage.HasBackButton="false"
+             Title="Backup and Restore">
+    <ScrollView>
+        <StackLayout>
+            <Label 
+            Text="Backup"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="28"
+            Margin="10"/>
+            <Label Text="Backup your data to the cloud. Backing up your data overwrites your data in the cloud with the data on your phone."
+            Margin="20,0,20,10"/>
+            <Label Text="Last backup completed: Never"
+                   x:Name="LastBackupLabel"
+               Margin="20,0,20,10"/>
+            <Button Text="Backup now"
+                Margin="20,0,20,10"
+                Clicked="BackupNowButtonPressed"/>
+            <Label 
+            Text="Restore"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="28"
+            Margin="10"/>
+            <Label Text="Restore your data from the cloud. Restoring your data overwrites your data on this device with your cloud data."
+               Margin="20,0,20,10"/>
+            <Button Text="Restore now"
+                Margin="20,0,20,10"
+                Clicked="RestoreNowButtonPressed"/>
+            <Button Text="Go back"
+                Margin="50,100,50,0"
+                Clicked="GoBackButtonPressed"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

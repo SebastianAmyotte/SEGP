@@ -5,10 +5,9 @@ namespace SEGP7;
 
 public partial class TabbedNavigation : Shell
 {
-    public BitIODatabaseController firebaseDB;
+    
     public TabbedNavigation()
 	{
-        firebaseDB = new BitIODatabaseController();
         InitializeComponent();
     }
 }

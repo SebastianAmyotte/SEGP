@@ -17,6 +17,11 @@ public partial class ProfilePage : ContentPage
         Username.Text = currentCredentials.User.Email;
     }
 
+    public void BackupAndRestoreButtonPresssed(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new BackupAndRestorePage());
+    }
+
     public void OnLogoutButtonPressed(object sender, EventArgs e)
     {
         Application.Current.MainPage = new NavigationPage(new LoginPage());
@@ -29,5 +34,10 @@ public partial class ProfilePage : ContentPage
     public void OnDeleteAccountButtonPressed(object sender, EventArgs e)
     {
 
+    }
+    public void OnQuitButtonPressed(object sender, EventArgs e)
+    {
+        //Quit the app
+        Application.Current.Quit();
     }
 }

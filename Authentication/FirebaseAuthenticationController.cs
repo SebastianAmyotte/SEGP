@@ -17,9 +17,7 @@ namespace SEGP7.Firebase
 
         public FirebaseAuthenticationController()
         {
-            MessagingCenter.Subscribe<String>(this, "SendCredentials", (sender) => {
-                MessagingCenter.Send(currentLoggedInUser, "GetCredentials");
-            });
+            RegisterAndSendMessages();
             authProvider = new FirebaseAuthProvider(new FirebaseConfig(FirebaseApiKey));
         }
 
@@ -29,9 +27,20 @@ namespace SEGP7.Firebase
         }
 
         //Create a new user
-        public async void CreateNewUser(String email, String password)
+        public String CreateNewUser(String email, String password)
         {
-            currentLoggedInUser = await authProvider.CreateUserWithEmailAndPasswordAsync(email, password, email, true);
+            try
+            {
+                currentLoggedInUser = authProvider.CreateUserWithEmailAndPasswordAsync(email, password, email, true).Result;
+                if (currentLoggedInUser != null)
+                {
+                    MessagingCenter.Send(email, "NewUserBitIO");
+                    return "";
+                }
+            } catch(Exception e) {
+                return e.Message;
+            }
+            return "Reason: Unknown";
         }
 
         //Login user with email and password to firebase
@@ -48,9 +57,26 @@ namespace SEGP7.Firebase
         }
 
         //Delete account
-        public async void DeleteAccount(String email, String password)
+        public bool DeleteAccount()
         {
-            currentLoggedInUser = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
+            String currentEmail = currentLoggedInUser.User.Email;
+            bool accountDeleted = false;
+            authProvider.DeleteUserAsync(currentLoggedInUser.FirebaseToken).ContinueWith(task =>
+            {
+                accountDeleted = true;
+            });
+            if (accountDeleted)
+            {
+                MessagingCenter.Send(currentEmail, "DeleteUser");
+            }
+            return accountDeleted;
+        }
+
+        void RegisterAndSendMessages()
+        {
+            MessagingCenter.Subscribe<String>(this, "SendCredentials", (sender) => {
+                MessagingCenter.Send(currentLoggedInUser, "GetCredentials");
+            });
         }
     }
 }

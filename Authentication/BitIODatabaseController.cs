@@ -12,25 +12,7 @@ namespace SEGP7.Firebase
         public BitIODatabaseController()
         {
             DatabaseSetup();
-            MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
-            {
-                currentCredentials = newCredentials;
-            });
-            MessagingCenter.Send("", "SendCredentials");
-            //Subscribe to writing journal entries
-            MessagingCenter.Subscribe<String>(this, "SaveJournal", (EntryObject) =>
-            {
-                WriteJournalEntry(EntryObject);
-            });
-            //async next to (EntryObject) may be unnecessary
-            MessagingCenter.Subscribe<String>(this, "LoadJournal", async (EntryObject) => 
-            {
-                //Create an asynchronous task
-                Task task = Task.Run(() => LoadJournalEntry());
-
-            });
-            //Subscribe to loading journal entries
-
+            SubscribeAndSendMessages();
         }
 
         void WriteJournalEntry(String data)
@@ -50,9 +32,47 @@ namespace SEGP7.Firebase
             
         }
 
+        void WriteEntry(String data, String columnName)
+        {
+            try
+            {
+                using var con = new NpgsqlConnection(DBURL);
+                con.Open();
+                var sql = $"UPDATE userdata SET {columnName} = '{data}' WHERE email = '{currentCredentials.User.Email}';";
+                using var cmd = new NpgsqlCommand(sql, con);
+                using NpgsqlDataReader reader = cmd.ExecuteReader();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        String LoadEntry(String columnName)
+        {
+            try
+            {
+                using var con = new NpgsqlConnection(DBURL);
+                con.Open();
+                var sql = $"SELECT journal FROM {columnName} WHERE email = '{currentCredentials.User.Email}';";
+                using var cmd = new NpgsqlCommand(sql, con);
+                using NpgsqlDataReader reader = cmd.ExecuteReaderAsync().Result;
+                reader.Read();
+                String result = (String)reader[0];
+                reader.Close();
+                con.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return "{}";
+            }
+        }
+        
         async void LoadJournalEntry()
         {
-            Console.WriteLine($"Loading from database: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
             try
             {
                 using var con = new NpgsqlConnection(DBURL);
@@ -65,7 +85,6 @@ namespace SEGP7.Firebase
                 MessagingCenter.Send((String)reader[0], "SendLoadedJournal");
                 reader.Close();
                 con.Close();
-                Console.WriteLine($"Got from database: {DateTimeOffset.Now.ToUnixTimeMilliseconds()}");
             }
             catch (Exception e)
             {
@@ -73,6 +92,43 @@ namespace SEGP7.Firebase
             }
         }
         
+        void RegisterUser(String email)
+        {
+            //INSERT INTO userdata VALUES ('test@test.com', '{}', '{}','{}')
+            try
+            {
+                using var con = new NpgsqlConnection(DBURL);
+                con.Open();
+                var sql = $"INSERT INTO userdata VALUES ('{email}', '{{}}', '{{}}','{{}}');";
+                using var cmd = new NpgsqlCommand(sql, con);
+                using NpgsqlDataReader reader = cmd.ExecuteReaderAsync().Result;
+                reader.Close();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        void DeleteAccount(String email)
+        {
+            try
+            {
+                using var con = new NpgsqlConnection(DBURL);
+                con.Open();
+                var sql = $"DELETE FROM userdata WHERE email='{email}';";
+                using var cmd = new NpgsqlCommand(sql, con);
+                using NpgsqlDataReader reader = cmd.ExecuteReaderAsync().Result;
+                reader.Close();
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
         void DatabaseSetup()
         {
             var bitHost = "db.bit.io";
@@ -82,6 +138,34 @@ namespace SEGP7.Firebase
             DBURL = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
         }
     
-        
+         void SubscribeAndSendMessages()
+        {
+            //Subscribe to new credentials
+            MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
+            {
+                currentCredentials = newCredentials;
+            });
+            //Subscribe to FirebaseAuth new user
+            MessagingCenter.Subscribe<String>(this, "NewUserBitIO", (email) =>
+            {
+                RegisterUser(email);
+            });
+            //Subscribe to Deleting current user
+            MessagingCenter.Subscribe<String>(this, "DeleteUser", (email) =>
+            {
+                DeleteAccount(email);
+            });
+
+            //Subscribe to writing journal entries
+            MessagingCenter.Subscribe<String>(this, "SaveJournal", (EntryObject) =>
+            {
+                WriteJournalEntry(EntryObject);
+            });
+            //Subscribe to loading journal requests
+            MessagingCenter.Subscribe<String>(this, "LoadJournal", (EntryObject) =>
+            {
+                LoadJournalEntry();
+            });
+        }
     }
 }
