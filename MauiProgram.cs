@@ -14,6 +14,8 @@ public static class MauiProgram
 		builder
 			.UseMauiApp<App>()
 			//.UseMauiCommunityToolkit()
+			//Needs plugin CommunityToolkit.Maui in order to function.
+			//Was needed for switching focuses between entries when presing the "enter" button
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
