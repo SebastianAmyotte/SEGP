@@ -2,6 +2,7 @@ namespace SEGP7.Pages;
 
 using global::Firebase.Auth;
 using SEGP7.Authentication;
+using SEGP7.Firebase;
 
 public partial class ProfilePage : ContentPage
 {
@@ -27,9 +28,15 @@ public partial class ProfilePage : ContentPage
         Application.Current.MainPage = new NavigationPage(new LoginPage());
     }
 
-    public void OnChangePasswordButtonPressed(object sender, EventArgs e)
+    public async void OnChangePasswordButtonPressed(object sender, EventArgs e)
     {
-        
+        String userEmail = currentCredentials.User.Email;
+        bool result = await DisplayAlert("Change Password?", $"If you would like a new password, we can send an email to {userEmail} containing a link to create a new password. Continue?", "Yes", "No");
+        if (result)
+        {
+            MessagingCenter.Send(userEmail, "ResetPassword");
+            DisplayAlert("Password reset", $"An email has been sent to {userEmail} with a link to change your password. Check your junk/spam!", "OK");
+        }
     }
     public void OnDeleteAccountButtonPressed(object sender, EventArgs e)
     {

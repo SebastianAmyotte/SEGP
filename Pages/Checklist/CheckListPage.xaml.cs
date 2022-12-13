@@ -20,7 +20,7 @@ public partial class ChecklistPage : ContentPage
         //Bind todays checklist to xaml
         ToDoList.ItemsSource = todaysChecklistEntries;
     }
-
+    
     private void UpdateCurrentChecklist()
     {
         //Check if dictionary of days contains the day that is now selected

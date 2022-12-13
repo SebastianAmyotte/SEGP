@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.Messaging;
-using Firebase.Auth;
+﻿using Firebase.Auth;
 
 namespace SEGP7.Firebase
 {
@@ -51,9 +45,9 @@ namespace SEGP7.Firebase
         }
 
         //Reset password
-        public async void ResetPassword(String email)
+        public void ResetPassword(String email)
         {
-            await authProvider.SendPasswordResetEmailAsync(email);
+             authProvider.SendPasswordResetEmailAsync(email);
         }
 
         //Delete account
@@ -77,6 +71,14 @@ namespace SEGP7.Firebase
             MessagingCenter.Subscribe<String>(this, "SendCredentials", (sender) => {
                 MessagingCenter.Send(currentLoggedInUser, "GetCredentials");
             });
+            MessagingCenter.Subscribe<String>(this, "ResetPassword", (email) => {
+                ResetPassword(email);
+            });
+        }
+
+        void ChangePassword(String newPassword)
+        {
+            currentLoggedInUser = authProvider.ChangeUserPassword(currentLoggedInUser.FirebaseToken, newPassword).Result;
         }
     }
 }
