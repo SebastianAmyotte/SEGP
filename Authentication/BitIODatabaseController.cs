@@ -14,24 +14,7 @@ namespace SEGP7.Firebase
             DatabaseSetup();
             SubscribeAndSendMessages();
         }
-
-        void WriteJournalEntry(String data)
-        {
-            try
-            {
-                using var con = new NpgsqlConnection(DBURL);
-                con.Open();
-                var sql = $"UPDATE userdata SET journal = '{data}' WHERE email = '{currentCredentials.User.Email}';";
-                using var cmd = new NpgsqlCommand(sql, con);
-                using NpgsqlDataReader reader = cmd.ExecuteReader();
-                con.Close();
-            }  catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            
-        }
-
+        
         void WriteEntry(String data, String columnName)
         {
             try
@@ -70,31 +53,10 @@ namespace SEGP7.Firebase
                 return "{}";
             }
         }
-        
-        async void LoadJournalEntry()
-        {
-            try
-            {
-                using var con = new NpgsqlConnection(DBURL);
-                con.Open();
-                var sql = $"SELECT journal FROM userdata WHERE email = '{currentCredentials.User.Email}';";
-                using var cmd = new NpgsqlCommand(sql, con);
-                using NpgsqlDataReader reader = await cmd.ExecuteReaderAsync();
-                reader.Read();
-                Console.Write("Test");
-                MessagingCenter.Send((String)reader[0], "SendLoadedJournal");
-                reader.Close();
-                con.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        
+
+
         void RegisterUser(String email)
         {
-            //INSERT INTO userdata VALUES ('test@test.com', '{}', '{}','{}')
             try
             {
                 using var con = new NpgsqlConnection(DBURL);
@@ -137,8 +99,8 @@ namespace SEGP7.Firebase
             var bitApiKey = "v2_3wjDP_Zhz4GqYM4MZXpTv4vGVChtX";
             DBURL = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
         }
-    
-         void SubscribeAndSendMessages()
+
+        void SubscribeAndSendMessages()
         {
             //Subscribe to new credentials
             MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
@@ -146,26 +108,22 @@ namespace SEGP7.Firebase
                 currentCredentials = newCredentials;
             });
             //Subscribe to FirebaseAuth new user
-            MessagingCenter.Subscribe<String>(this, "NewUserBitIO", (email) =>
-            {
-                RegisterUser(email);
-            });
+            MessagingCenter.Subscribe<String>(this, "NewUserBitIO", (email) => RegisterUser(email));
             //Subscribe to Deleting current user
-            MessagingCenter.Subscribe<String>(this, "DeleteUser", (email) =>
-            {
-                DeleteAccount(email);
-            });
+            MessagingCenter.Subscribe<String>(this, "DeleteAccount", (email) => DeleteAccount(email));
 
-            //Subscribe to writing journal entries
-            MessagingCenter.Subscribe<String>(this, "SaveJournal", (EntryObject) =>
+            String[] pagesToReadAndWrite = { "Journal", "Tasks", "Notes" };
+            foreach (String page in pagesToReadAndWrite)
             {
-                WriteJournalEntry(EntryObject);
-            });
-            //Subscribe to loading journal requests
-            MessagingCenter.Subscribe<String>(this, "LoadJournal", (EntryObject) =>
-            {
-                LoadJournalEntry();
-            });
+                MessagingCenter.Subscribe<String>(this, $"Save{page}", (data) =>
+                {
+                    WriteEntry(data, page);
+                });
+                MessagingCenter.Subscribe<String>(this, $"Load{page}", (data) =>
+                {
+                    MessagingCenter.Send(LoadEntry(page), $"SendLoaded{page}");
+                });
+            }
         }
     }
 }

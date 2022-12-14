@@ -1,4 +1,7 @@
+using SEGP7.Tools;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Xml.Serialization;
 
 namespace SEGP7.Pages;
 
@@ -82,6 +85,7 @@ public partial class ChecklistPage : ContentPage
             {
                 todaysChecklistEntries.Remove(tappedEntry);
             }
+            ChangesMade();
         }
         else
         {
@@ -98,6 +102,22 @@ public partial class ChecklistPage : ContentPage
             {
                 todoItem.IsCompleted = true;
             }
+            ChangesMade();
         }
+    }
+    
+    void ChangesMade()
+    {
+        SaveToDisk();
+    }
+    
+    
+    void SaveToDisk()
+    {
+        
+    }
+    
+    void LoadFromDisk()
+    {
     }
 }

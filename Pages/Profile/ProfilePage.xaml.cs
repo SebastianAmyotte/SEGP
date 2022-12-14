@@ -40,7 +40,7 @@ public partial class ProfilePage : ContentPage
     }
     public void OnDeleteAccountButtonPressed(object sender, EventArgs e)
     {
-
+        MessagingCenter.Send(currentCredentials.User.Email, "DeleteAccount");
     }
     public void OnQuitButtonPressed(object sender, EventArgs e)
     {

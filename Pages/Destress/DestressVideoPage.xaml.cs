@@ -118,8 +118,12 @@ public class ProgressArc : IDrawable
         canvas.StrokeSize = 10;
         canvas.StrokeColor = Colors.Black;
         canvas.DrawArc(5, 5, (dirtyRect.Width - 10), (dirtyRect.Height - 10), 0, 360, false, false);
+        //Draw a circle in the center of the scree
         var endAngle = 90 - (int)Math.Round(Progress * 360, MidpointRounding.AwayFromZero);
         canvas.StrokeColor = Color.FromRgba("6599ff");
         canvas.DrawArc(5, 5, (dirtyRect.Width - 10), (dirtyRect.Height - 10), 90, endAngle, false, false);
+        canvas.StrokeColor = Color.FromRgba(0, 0, 0, 50);
+        canvas.FillColor = Color.FromRgba(0, 0, 0, 80);
+        canvas.FillCircle(125, 125, 50);
     }
 }

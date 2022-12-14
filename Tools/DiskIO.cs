@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace SEGP7.Tools
 {
-    //Create an enumerable of colors
-
     public class DiskIO
     {
         String systemPath = FileSystem.Current.AppDataDirectory;

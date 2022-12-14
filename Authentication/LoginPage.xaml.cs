@@ -23,8 +23,7 @@ public partial class LoginPage : ContentPage
         }
     }
     
-    
-    private async void LoginUserButtonPushed(object sender, EventArgs e)
+    private void LoginUserButtonPushed(object sender, EventArgs e)
     {
         try
         {
@@ -58,9 +57,7 @@ public partial class LoginPage : ContentPage
         } catch (Exception error)
         {
             DisplayAlert("Error creating account", error.Message, "OK");
-
         }
-        
     }
 
     private void ForgotPasswordButtonPushed(object sender, EventArgs e)

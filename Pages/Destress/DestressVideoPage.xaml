@@ -7,20 +7,24 @@
              Shell.TabBarIsVisible="False">
     <Grid BackgroundColor="AntiqueWhite">
         <Image x:Name="backgroundImage" Aspect="AspectFill" HeightRequest="1000"></Image>
+        
+        <GraphicsView x:Name="ProgressView"
+	        BackgroundColor="PaleTurquoise"
+	        HeightRequest="250"
+	        WidthRequest="250"/>
+        
         <Label x:Name="ProgressButton" 
             Text=""
             FontSize="30"
-            TextColor="Black"
+            TextColor="White"
             HeightRequest="80"
             WidthRequest="80"
             HorizontalTextAlignment="Center"
             VerticalTextAlignment="Center"
             HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-        <GraphicsView x:Name="ProgressView"
-	        BackgroundColor="PaleTurquoise"
-	        HeightRequest="250"
-	        WidthRequest="250"/>
+            VerticalOptions="Center"
+            BackgroundColor="Transparent"/>
+
         <Button BackgroundColor="Transparent" Pressed="CountdownTapped"></Button>
     </Grid>
 </ContentPage>

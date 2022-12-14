@@ -130,7 +130,7 @@ public partial class JournalPage : ContentPage
     void LoadFromDisk()
     {
         DiskIO diskIO = new DiskIO("journal.txt");
-        String result = diskIO.ReadFromFile();
-        dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(result);
+        String dataFromDisk = diskIO.ReadFromFile();
+        dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(dataFromDisk);
     }
 }

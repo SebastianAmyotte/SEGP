@@ -1,6 +1,5 @@
 using System.Collections.ObjectModel;
 namespace SEGP7.Pages;
-using CommunityToolkit.Mvvm.ComponentModel;
 
 public partial class AddChecklistItemPage : ContentPage
 {

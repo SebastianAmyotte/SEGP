@@ -74,6 +74,9 @@ namespace SEGP7.Firebase
             MessagingCenter.Subscribe<String>(this, "ResetPassword", (email) => {
                 ResetPassword(email);
             });
+            MessagingCenter.Subscribe<String>(this, "DeleteAccount", (sender) => {
+                DeleteAccount();
+            });
         }
 
         void ChangePassword(String newPassword)
