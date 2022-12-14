@@ -15,7 +15,6 @@ public partial class JournalPage : ContentPage
     public JournalPage()
     {
         dailyEntries = new Dictionary<DateTime, JournalEntry>();
-        
         InitializeComponent();
         UpdateCurrentEntry();
         datePicker.Date = currentDay;
@@ -40,7 +39,7 @@ public partial class JournalPage : ContentPage
     {
         currentDay = currentDay.AddDays(-1);
         datePicker.Date = currentDay;
-        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text); //Await Async
+        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem ?? "", dailyThoughts.Text); //Await Async
         UpdateCurrentEntry();
     }
 
@@ -48,7 +47,7 @@ public partial class JournalPage : ContentPage
     {
         DatePicker datePicker = (DatePicker)sender;
         currentDay = datePicker.Date;
-        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text);
+        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem ?? "", dailyThoughts.Text);
         UpdateCurrentEntry();
     }
 
@@ -63,7 +62,7 @@ public partial class JournalPage : ContentPage
         else
         {
             datePicker.Date = currentDay;
-            LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem, dailyThoughts.Text); //Await Async
+            LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem ?? "", dailyThoughts.Text); //Await Async
             UpdateCurrentEntry();
         }
 

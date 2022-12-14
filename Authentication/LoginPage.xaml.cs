@@ -65,7 +65,7 @@ public partial class LoginPage : ContentPage
 
     private void ForgotPasswordButtonPushed(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ResetPasswordPage());
+        Navigation.PushAsync(new ResetPasswordPage(authController));
     }
 
     private void QuitButtonPushed(object sender, EventArgs e)
