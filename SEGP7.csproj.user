@@ -3,8 +3,8 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net7.0-android</ActiveDebugFramework>
-    <ActiveDebugProfile>Pixel 5 - API 32 (Android 12.1 - API 32)</ActiveDebugProfile>
-    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <ActiveDebugProfile>Samsung SM-S506DL (Android 11.0 - API 30)</ActiveDebugProfile>
+    <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_32</DefaultDevice>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">

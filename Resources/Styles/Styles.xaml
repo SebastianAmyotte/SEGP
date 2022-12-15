@@ -68,7 +68,7 @@
 
     <Style TargetType="DatePicker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -89,7 +89,7 @@
 
     <Style TargetType="Editor">
         <Setter Property="TextColor" Value="{StaticResource Black}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray200}" />
@@ -111,7 +111,7 @@
 
     <Style TargetType="Entry">
         <Setter Property="TextColor" Value="{StaticResource Black}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray200}" />
@@ -139,7 +139,7 @@
 
     <Style TargetType="ImageButton">
         <Setter Property="Opacity" Value="1" />
-        <Setter Property="BorderColor" Value="White"/>
+        <Setter Property="BorderColor" Value="{StaticResource White}"/>
         <Setter Property="BorderWidth" Value="0"/>
         <Setter Property="CornerRadius" Value="0"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -160,7 +160,7 @@
 
     <Style TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -185,7 +185,7 @@
     <Style TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="TitleColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -222,7 +222,7 @@
     </Style>
 
     <Style TargetType="RadioButton">
-        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
         <Setter Property="TextColor" Value="{StaticResource Black}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
@@ -250,7 +250,7 @@
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray500}" />
         <Setter Property="CancelButtonColor" Value="{StaticResource Gray500}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -273,7 +273,7 @@
     <Style TargetType="SearchHandler">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray500}" />
-        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -353,7 +353,7 @@
 
     <Style TargetType="TimePicker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
