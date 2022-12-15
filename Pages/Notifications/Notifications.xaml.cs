@@ -4,10 +4,11 @@ using SEGP7.Tools;
 
 namespace SEGP7.Pages;
 
+// Secondary Author: Sebastian Amyotte - Wrote the necessary code for data persistence
+
 public partial class NotificationsPage : ContentPage
 {
     ObservableCollection<NotificationsEntry> notificationEntries;
-    List<NotificationsEntry> notificationEntriesStorage;
     bool pageLoaded = false;
 	public NotificationsPage()
 	{
@@ -38,6 +39,12 @@ public partial class NotificationsPage : ContentPage
         }
     }
 
+    protected override void OnDisappearing()
+    {
+        base.OnAppearing();
+        pageLoaded = false;
+    }
+
     async void OnDeleteButtonPressed(object sender, EventArgs e)
     {
 		//Make sure somethingis actually selected
@@ -61,9 +68,10 @@ public partial class NotificationsPage : ContentPage
     private void OnAddButtonPressed(object sender, EventArgs e)
     {
         Navigation.PushAsync(new AddNotificationPage(notificationEntries));
+        pageLoaded = true;
     }
 
-    //Data persistence
+    // Data persistence - Sebastian Amyotte
     void ChangesMade()
     {
         SaveToDisk();
@@ -71,15 +79,23 @@ public partial class NotificationsPage : ContentPage
 
     void SaveToDisk()
     {
-        DiskIO diskIO = new DiskIO("checklist.txt");
+        DiskIO diskIO = new DiskIO("notifications.txt");
         String xml = ObjectSerializer<ObservableCollection<NotificationsEntry>>.ToXml(notificationEntries);
         diskIO.WriteToFile(xml);
     }
     void LoadFromDisk()
     {
-        DiskIO diskIO = new DiskIO("checklist.txt");
-        String dataFromDisk = diskIO.ReadFromFile();
-        notificationEntries = ObjectSerializer<ObservableCollection<NotificationsEntry>>.FromXml(dataFromDisk);
-        NotificationsList.ItemsSource = notificationEntries;
+        try
+        {
+            DiskIO diskIO = new DiskIO("notifications.txt");
+            String dataFromDisk = diskIO.ReadFromFile();
+            notificationEntries = ObjectSerializer<ObservableCollection<NotificationsEntry>>.FromXml(dataFromDisk);
+            NotificationsList.ItemsSource = notificationEntries;
+        }
+        catch (Exception e) {
+            //File not found
+            DiskIO diskIO = new DiskIO("notifications.txt");
+            diskIO.WriteToFile("");
+        }
     }
 }

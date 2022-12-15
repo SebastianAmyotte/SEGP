@@ -3,11 +3,20 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
+
+
 namespace SEGP7.Tools
 {
     internal static class ObjectSerializer<T>
     {
-        // https://www.c-sharpcorner.com/UploadFile/manishkdwivedi/save-a-observablecollection-to-application-storage-in-window/
+        // Author: https://www.c-sharpcorner.com/UploadFile/manishkdwivedi/save-a-observablecollection-to-application-storage-in-window/
+        // Implemented by: Sebastian Amyotte
+        // Not much in the code was changed
+        // Description: Serializes an object to a string. but uses XML serialization instead
+        // Traditional serialization does not support Dictionaries. Xml does.
+        // Usage:
+        // String serializedResult = ObjectSerializer<Dictionary<String, String>>.Serialize(object);
+        // Dictionary<String, String> deserializedResult = ObjectSerializer<Dictionary<String, String>>.Deserialize(serializedResult);
         public static string ToXml(T value)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(T));

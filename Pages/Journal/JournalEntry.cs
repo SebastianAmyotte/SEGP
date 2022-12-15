@@ -2,11 +2,14 @@
 using Firebase.Auth;
 using SEGP7;
 
+// Author: Sebastian Amyotte
+// A class that represents a single entry in the journal
+
 public class JournalEntry
 {
     public String entry;
     public String rating;
-
+    
     public JournalEntry(String entry, String rating)
     {
         this.entry = entry;

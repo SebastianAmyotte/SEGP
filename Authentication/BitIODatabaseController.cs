@@ -38,7 +38,7 @@ namespace SEGP7.Firebase
             {
                 using var con = new NpgsqlConnection(DBURL);
                 con.Open();
-                var sql = $"SELECT journal FROM {columnName} WHERE email = '{currentCredentials.User.Email}';";
+                var sql = $"SELECT {columnName} FROM userdata WHERE email = '{currentCredentials.User.Email}';";
                 using var cmd = new NpgsqlCommand(sql, con);
                 using NpgsqlDataReader reader = cmd.ExecuteReaderAsync().Result;
                 reader.Read();
@@ -111,19 +111,26 @@ namespace SEGP7.Firebase
             MessagingCenter.Subscribe<String>(this, "NewUserBitIO", (email) => RegisterUser(email));
             //Subscribe to Deleting current user
             MessagingCenter.Subscribe<String>(this, "DeleteAccount", (email) => DeleteAccount(email));
+            
 
-            String[] pagesToReadAndWrite = { "Journal", "Tasks", "Notes" };
-            foreach (String page in pagesToReadAndWrite)
+
+            MessagingCenter.Subscribe<String>(this, $"SaveJournal", (data) =>
             {
-                MessagingCenter.Subscribe<String>(this, $"Save{page}", (data) =>
-                {
-                    WriteEntry(data, page);
-                });
-                MessagingCenter.Subscribe<String>(this, $"Load{page}", (data) =>
-                {
-                    MessagingCenter.Send(LoadEntry(page), $"SendLoaded{page}");
-                });
-            }
+                WriteEntry(data, "journal");
+            });
+            MessagingCenter.Subscribe<String>(this, $"LoadJournal", (data) =>
+            {
+                MessagingCenter.Send(LoadEntry("journal"), $"SendLoadedJournal");
+            });
+
+            MessagingCenter.Subscribe<String>(this, $"SaveNotifications", (data) =>
+            {
+                WriteEntry(data, "notifications");
+            });
+            MessagingCenter.Subscribe<String>(this, $"LoadNotifications", (data) =>
+            {
+                MessagingCenter.Send(LoadEntry("notifications"), $"SendLoadedNotifications");
+            });
         }
     }
 }

@@ -4,15 +4,21 @@ using global::Firebase.Auth;
 using SEGP7.Authentication;
 using SEGP7.Firebase;
 
+// Author: Sebastian Amyotte
+// Description: The profile page that appears after logging in, the first tab in the tabbed navigation
+// Has features to back up, restore, change password, delete account..
+
 public partial class ProfilePage : ContentPage
 {
     FirebaseAuthLink currentCredentials;
 	public ProfilePage()
 	{
+        // Subscribe to receiving credentials broadcasts
         MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
         {
             currentCredentials = newCredentials;
         });
+        // Send a request to broadcast credentials
         MessagingCenter.Send("", "SendCredentials");
         InitializeComponent();
         Username.Text = currentCredentials.User.Email;
@@ -44,7 +50,7 @@ public partial class ProfilePage : ContentPage
     }
     public void OnQuitButtonPressed(object sender, EventArgs e)
     {
-        //Quit the app
+        // Quit the app
         Application.Current.Quit();
     }
 }

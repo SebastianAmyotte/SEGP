@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace SEGP7.Tools
 {
+    // Author: Sebastian Amyotte
+    // Description: Simple DiskIO operations that helps abstract code away
+    // Usage:
+    // String resultsFromDisk = new DiskIO("filename.txt").ReadFromFile(); //Reading
+    // new DiskIO("filename.txt").WriteToFile("Hello World"); //Writing
     public class DiskIO
     {
         String systemPath = FileSystem.Current.AppDataDirectory;

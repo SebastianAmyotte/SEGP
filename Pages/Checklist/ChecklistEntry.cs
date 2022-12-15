@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace SEGP7.Pages
-{
-    [System.Xml.Serialization.XmlInclude(typeof(String))]
-    [System.Xml.Serialization.XmlInclude(typeof(bool))]
+//Author: Sebastian Amyotte
+//Description: A representation of a single checklist item
 
+namespace SEGP7.Pages
+{ 
     public class ChecklistEntry : ObservableObject
     {
         public String toDoItemName;

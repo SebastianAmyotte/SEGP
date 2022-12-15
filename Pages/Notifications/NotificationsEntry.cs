@@ -9,7 +9,7 @@ namespace SEGP7.Pages
 
 		public String NotificationTitle { get { return notificationName + ' ' + timeSet; } }
 		
-		//Required for XML Serialization
+		// Required for XML Serialization
 		public NotificationsEntry() { }
         public NotificationsEntry(String entry, DateTime timeSetFor)
 		{

@@ -1,6 +1,9 @@
 using System.Collections.ObjectModel;
 namespace SEGP7.Pages;
 
+// Author: Sebastian Amyotte
+// Description: The add checklist page
+
 public partial class AddChecklistItemPage : ContentPage
 {
     private ObservableCollection<ChecklistEntry> todaysChecklistEntries;

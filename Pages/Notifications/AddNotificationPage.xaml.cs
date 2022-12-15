@@ -17,16 +17,16 @@ public partial class AddNotificationPage : ContentPage
 
 	async void OnScheduleNotificationButtonPressed(object sender, EventArgs e)
 	{
-		//method to set how often the notification goes off
+		// method to set how often the notification goes off
 		System.TimeSpan interval;
 		try
 		{
 			interval = CheckUserInterval();
 		}
-		//if the method returns an error
+		// if the method returns an error
 		catch
 		{
-			//sets a default interval of 1 hour
+			// sets a default interval of 1 hour
 			interval = System.TimeSpan.FromHours(1);//FIXME
 		}
 
@@ -48,9 +48,7 @@ public partial class AddNotificationPage : ContentPage
 			};
 
 			await LocalNotificationCenter.Current.Show(request);
-
 			notificationEntries.Add(new NotificationsEntry(title.Text, futureDate));
-
 			await Navigation.PopAsync();
 		}
 	}

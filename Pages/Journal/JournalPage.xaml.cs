@@ -6,10 +6,16 @@ using System.Text;
 
 namespace SEGP7.Pages;
 
+// Author: Sebastian Amyotte
+// Description: The main journal page. 
+
 public partial class JournalPage : ContentPage
 {
+    // Each day (DateTime) is a key that lookups the corresponding journal entry
     Dictionary<DateTime, JournalEntry> dailyEntries;
+    // By default, page opens to today's date
     DateTime currentDay = DateTime.Today;
+    // The entry that is currently being edited
     JournalEntry currentDisplayedEntry;
 
     public JournalPage()
@@ -18,6 +24,7 @@ public partial class JournalPage : ContentPage
         InitializeComponent();
         UpdateCurrentEntry();
         datePicker.Date = currentDay;
+        // Prevent people from using the picker to go forwards in time
         datePicker.MaximumDate = currentDay;
     }
 
@@ -26,16 +33,22 @@ public partial class JournalPage : ContentPage
         base.OnAppearing();
         try
         {
+            // Load the serialized dictionary from disk
             LoadFromDisk();
-        }
-        catch (Exception e)
-        {
-
-        }
+        } catch (Exception e) { }
+        // Update the current entry with the disk data
         UpdateCurrentEntry();
     }
 
-        void OnBackButtonPressed(object sender, EventArgs e)
+    // This runs when the user navigates away from the Journal page
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        // Checks for unsaved changes
+        LookForUnsavedWorkAsync(currentDisplayedEntry, (String)ratingPicker.SelectedItem ?? "", dailyThoughts.Text);
+    }
+    
+    void OnBackButtonPressed(object sender, EventArgs e)
     {
         currentDay = currentDay.AddDays(-1);
         datePicker.Date = currentDay;
@@ -68,23 +81,27 @@ public partial class JournalPage : ContentPage
 
     }
 
+    
     void UpdateCurrentEntry()
     {
-        //Update data structure
+        // Checks to see the new date that was navigated to exists in the dictionary
         if (dailyEntries.ContainsKey(currentDay))
         {
+            // If it does, simply load it
             currentDisplayedEntry = dailyEntries[currentDay];
         }
         else
         {
+            // If it doesn't, create a new, blank entry, and display that
             currentDisplayedEntry = new JournalEntry("", "");
             dailyEntries.Add(currentDay, currentDisplayedEntry);
         }
-        //Update UI
+        // Update UI
         dailyThoughts.Text = currentDisplayedEntry.GetEntry();
         ratingPicker.SelectedItem = currentDisplayedEntry.GetRating();
     }
 
+    // This looks for unsaved work, and asks the user if they want to save it
     async void LookForUnsavedWorkAsync(JournalEntry currentJournal, String rating, String dailyThoughts)
     {
         if (ChangesMade(currentJournal, rating, dailyThoughts))
@@ -94,16 +111,20 @@ public partial class JournalPage : ContentPage
             {
                 currentJournal.SaveRating(rating);
                 currentJournal.SaveEntry(dailyThoughts);
+                SaveToDisk();
             }
         }
     }
 
+    // This checks to see if any changes have been made to the current entry
     bool ChangesMade(JournalEntry currentJournal, String rating, String dailyThoughts)
     {
         bool changesMadeToRating = !currentJournal.GetRating().Equals(rating);
         bool changesMadeToJournalEntry = !currentJournal.GetEntry().Equals(dailyThoughts);
         return changesMadeToRating || changesMadeToJournalEntry;
     }
+
+    // Saves the dictionary to disk
     void OnSaveButtonPressed(object sender, EventArgs e)
     {
         currentDisplayedEntry.SaveEntry(dailyThoughts.Text);
@@ -111,7 +132,8 @@ public partial class JournalPage : ContentPage
         SaveToDisk();
         DisplayAlert("Saved", "Journal entry saved", "OK");
     }
-
+     
+    // Reverts all changes since last save
     async void OnRevertButtonPressed(object sender, EventArgs e)
     {
         bool response = await DisplayAlert("Discard?", "Are you sure you want to discard your changes?", "Discard", "Keep");
@@ -129,8 +151,16 @@ public partial class JournalPage : ContentPage
     }
     void LoadFromDisk()
     {
-        DiskIO diskIO = new DiskIO("journal.txt");
-        String dataFromDisk = diskIO.ReadFromFile();
-        dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(dataFromDisk);
+        try
+        {
+            DiskIO diskIO = new DiskIO("journal.txt");
+            String dataFromDisk = diskIO.ReadFromFile();
+            dailyEntries = JsonConvert.DeserializeObject<Dictionary<DateTime, JournalEntry>>(dataFromDisk);
+        } catch (Exception e)
+        {
+            //File not found
+            DiskIO diskIO = new DiskIO("journal.txt");
+            diskIO.WriteToFile("");
+        }
     }
 }

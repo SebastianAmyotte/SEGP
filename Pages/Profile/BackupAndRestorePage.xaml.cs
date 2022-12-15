@@ -33,6 +33,13 @@ public partial class BackupAndRestorePage : ContentPage
         //Replace all single quotes with double quotes, to escape them for sql execution
         fileContents = fileContents.Replace("'", "''");
         MessagingCenter.Send(fileContents, "SaveJournal");
+
+        //Backup Notifications page
+        fileContents = new DiskIO("notifications.txt").ReadFromFile();
+        //Replace all single quotes with double quotes, to escape them for sql execution
+        fileContents = fileContents.Replace("'", "''");
+        MessagingCenter.Send(fileContents, "SaveNotifications");
+
         //Save current time the backup completed
         new DiskIO("lastbackup.txt").WriteToFile(new Serializer().Serialize(DateTime.Now));
         LastBackupLabel.Text = $"Last backup completed: {DateTime.Now.ToShortDateString()} at {DateTime.Now.ToShortTimeString()}";
@@ -47,6 +54,14 @@ public partial class BackupAndRestorePage : ContentPage
             new DiskIO("journal.txt").WriteToFile(EntryObject);
         });
         MessagingCenter.Send("LoadJournal", "LoadJournal");
+
+        //Notifications
+        MessagingCenter.Subscribe<String>(this, "SendLoadedNotifications", (EntryObject) =>
+        {
+            new DiskIO("notifications.txt").WriteToFile(EntryObject);
+        });
+        MessagingCenter.Send("LoadNotifications", "LoadNotifications");
+
         DisplayAlert("Complete", "Restore completed", "OK");
         //End Journal
     }
