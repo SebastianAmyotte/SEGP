@@ -2,7 +2,9 @@ using System.Collections.ObjectModel;
 using Plugin.LocalNotification;
 
 namespace SEGP7.Pages;
-
+// Primary author: Calvin Larson
+// Secondary Author:
+// Description: Allows user to create notification
 public partial class AddNotificationPage : ContentPage
 {
 	private ObservableCollection<NotificationsEntry> notificationEntries;

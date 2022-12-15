@@ -1,4 +1,7 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// Primary author: Calvin Larson
+// Secondary author:
+// Description: Object class for all notifications
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SEGP7.Pages
 {

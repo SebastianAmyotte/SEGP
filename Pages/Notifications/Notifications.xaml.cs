@@ -3,8 +3,9 @@ using System.Collections.ObjectModel;
 using SEGP7.Tools;
 
 namespace SEGP7.Pages;
-
+// Primary author: Calvin Larson
 // Secondary Author: Sebastian Amyotte - Wrote the necessary code for data persistence
+// Description: Shows all current notifications
 
 public partial class NotificationsPage : ContentPage
 {
