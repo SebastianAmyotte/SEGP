@@ -10,8 +10,8 @@
             FontSize="32"/>
         <Border Margin="5">
             <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
-                <Label Text="Duration: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                <Picker x:Name="durationPicker" Title="Duration" FontSize="18" SelectedIndexChanged="DuractionPickerPressed">
+                <Label Text="Duration: " VerticalOptions="Center" Margin="5" FontSize="22" BackgroundColor="Transparent"/>
+                <Picker x:Name="durationPicker" Title="Duration" FontSize="18" SelectedIndexChanged="DuractionPickerPressed" WidthRequest="500">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>15 seconds</x:String>
@@ -28,20 +28,19 @@
         </Border>
         <Border Margin="5">
             <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <Label Text="Sound: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                <Picker x:Name="soundPicker" Title="Sound" FontSize="18" SelectedIndexChanged="SoundPickerPressed">
+                <Label Text="Sound: " VerticalOptions="Center" Margin="5" FontSize="22" BackgroundColor="Transparent"/>
+                <Picker x:Name="soundPicker" Title="Sound" FontSize="18" SelectedIndexChanged="SoundPickerPressed" WidthRequest="500">
+                    
                 </Picker>
             </HorizontalStackLayout>
         </Border>
         <Border Margin="5">
             <HorizontalStackLayout HorizontalOptions="Start" Margin="10">
-                <Label Text="Backgrounds: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                <Picker x:Name="backgroundPicker" Title="Backgrounds" FontSize="18" SelectedIndexChanged="BackgroundPickerPressed">
+                <Label Text="Backgrounds: " VerticalOptions="Center" Margin="5" FontSize="22" BackgroundColor="Transparent"/>
+                <Picker x:Name="backgroundPicker" Title="Backgrounds" FontSize="18" SelectedIndexChanged="BackgroundPickerPressed" WidthRequest="500">
                 </Picker>
             </HorizontalStackLayout>
         </Border>
         <Button x:Name="SubmitButton" Text="Start de-stressing" WidthRequest="250" FontSize="22" Clicked="StartDestressingButtonPressed" Margin="10"/>
-        <!-- Debug button remove before final submission -->
-        <Button x:Name="DebugButton" Text="DebugView" WidthRequest="250" FontSize="22" Clicked="StartDestressingButtonDebugPressed" />
-    </StackLayout>
+        </StackLayout>
 </ContentPage>

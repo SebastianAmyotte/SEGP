@@ -3,17 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP7.Pages.ChecklistPage"
              Title="Todo items">
-    <StackLayout Orientation="Vertical" BackgroundColor="White">
-        <FlexLayout JustifyContent="Center">
+    <StackLayout Orientation="Vertical">
+        <HorizontalStackLayout HorizontalOptions="Center">
             <!-- Date selector -->
-            <ImageButton Source="arrowback.png" Margin="0, 0, 15, 0"
+            <Border WidthRequest="55" BackgroundColor="{StaticResource Black}" Margin="0, 5, 15, 0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="90,90,90,90"/>
+                </Border.StrokeShape>
+                <ImageButton Source="arrowback.png"
                  Clicked="GoBackADayButtonPressed"
-                 HeightRequest="50"/>
+                 HeightRequest="50"
+                 BackgroundColor="{StaticResource Black}"/>
+            </Border>
+
             <DatePicker x:Name="datePicker" FontSize="26" DateSelected="DatePickerPressed"/>
-            <ImageButton Source="arrownext.png" Margin="15, 0, 0, 0"
+
+            <Border WidthRequest="55" BackgroundColor="{StaticResource Black}" Margin="15, 5, 0, 0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="90,90,90,90"/>
+                </Border.StrokeShape>
+                <ImageButton Source="arrownext.png"
                  Clicked="GoForwardADayButtonPressed"
-                 HeightRequest="50"/>
-        </FlexLayout>
+                 HeightRequest="50"
+                 BackgroundColor="{StaticResource Black}"/>
+            </Border>
+        </HorizontalStackLayout>
         <!-- List of checklist items-->
         <ScrollView VerticalOptions="FillAndExpand">
             <VerticalStackLayout>
@@ -33,24 +47,36 @@
                 </ListView>
                 <!-- Floating action buttons-->
                 <HorizontalStackLayout HorizontalOptions="End">
-                    <ImageButton
-                     HorizontalOptions="End" 
-                     Margin="10"
-                     Source="addcircle.png"
-                     Clicked="AddToDoItemButtonPressed"
-                     HeightRequest="50"/>
-                    <ImageButton
-                     HorizontalOptions="End" 
-                     Margin="10"
-                     Source="delete.png"
-                     Clicked="DeleteChecklistButtonPressed"
-                     HeightRequest="50"/>
-                    <ImageButton
-                     HorizontalOptions="End" 
-                     Margin="10"
-                     Source="checklist.png"
-                     Clicked="CheckoffAllChecklistItemsButtonPressed"
-                     HeightRequest="50"/>
+                    <Border WidthRequest="50" BackgroundColor="{StaticResource Black}" Margin="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="90,90,90,90"/>
+                        </Border.StrokeShape>
+                        <ImageButton
+                         HorizontalOptions="Center" 
+                         Source="addcircle.png"
+                         Clicked="AddToDoItemButtonPressed"
+                         HeightRequest="50"
+                         BackgroundColor="{StaticResource Black}"/>
+                    </Border>
+                    <Border WidthRequest="50" BackgroundColor="{StaticResource Black}" Margin="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="90,90,90,90"/>
+                        </Border.StrokeShape>
+                        <ImageButton
+                         HorizontalOptions="Center" 
+                         Source="delete.png"
+                         Clicked="DeleteChecklistButtonPressed"
+                         HeightRequest="50"
+                         BackgroundColor="{StaticResource Black}"/>
+                    </Border>
+                    <Border WidthRequest="50" BackgroundColor="{StaticResource Black}" Margin="10">
+                        <ImageButton
+                         HorizontalOptions="Center" 
+                         Source="checklist.png"
+                         Clicked="CheckoffAllChecklistItemsButtonPressed"
+                         HeightRequest="50"
+                         BackgroundColor="{StaticResource Black}"/>
+                    </Border>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
 

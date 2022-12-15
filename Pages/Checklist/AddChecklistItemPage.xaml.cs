@@ -1,6 +1,8 @@
 using System.Collections.ObjectModel;
 namespace SEGP7.Pages;
-using CommunityToolkit.Mvvm.ComponentModel;
+
+// Author: Sebastian Amyotte
+// Description: The add checklist page
 
 public partial class AddChecklistItemPage : ContentPage
 {

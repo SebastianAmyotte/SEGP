@@ -2,28 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SEGP7.Pages.AddNotificationPage"
-             Title="AddNotificationPage">
+             Title="Add Notification Page">
     <VerticalStackLayout>
 
         <StackLayout>
             <Border Margin="5">
                 <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
                     <Label Text="When: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                    <DatePicker MinimumDate="01/01/2022" MaximumDate="12/31/2022" Date="12/01/2022" />
+                    <DatePicker x:Name="datePicker" />
                 </HorizontalStackLayout>
             </Border>
 
             <Border Margin="5">
                 <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
                     <Label Text="At: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                    <TimePicker Time="5:00:00" />
+                    <TimePicker x:Name="timePicker" />
                 </HorizontalStackLayout>
             </Border>
 
             <Border Margin="5">
                 <HorizontalStackLayout HorizontalOptions="Start" Margin="10" >
                     <Label Text="Every: " VerticalOptions="Center" Margin="5" FontSize="22"/>
-                    <Picker x:Name="interval" SelectedIndex="0" WidthRequest="100" Title="Select interval">
+                    <Picker x:Name="interval" SelectedIndex="0" WidthRequest="110" Title="Select interval">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Hour</x:String>

@@ -1,14 +1,19 @@
-﻿public class JournalEntry
-{
-    String entry;
-    String rating;
-    DateTime date;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using Firebase.Auth;
+using SEGP7;
 
-    public JournalEntry(String entry, String rating, DateTime date)
+// Author: Sebastian Amyotte
+// A class that represents a single entry in the journal
+
+public class JournalEntry
+{
+    public String entry;
+    public String rating;
+    
+    public JournalEntry(String entry, String rating)
     {
         this.entry = entry;
         this.rating = rating;
-        this.date = date;
     }
 
     public String GetEntry()

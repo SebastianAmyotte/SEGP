@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net7.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SEGP7
+build_property.ProjectDir = C:\Users\bacon\OneDrive\Documents\GitHub\SEGP\
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Authentication/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Authentication.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Authentication\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Authentication\LoginPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Authentication/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Authentication.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Authentication\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Authentication\RegisterPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Authentication/ResetPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Authentication.ResetPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Authentication\ResetPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Authentication\ResetPasswordPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Checklist/AddChecklistItemPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Checklist.AddChecklistItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Checklist\AddChecklistItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Checklist\AddChecklistItemPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Checklist/CheckListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Checklist.CheckListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Checklist\CheckListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Checklist\CheckListPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Destress/DestressPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Destress.DestressPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Destress\DestressPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Destress\DestressPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Destress/DestressVideoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Destress.DestressVideoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Destress\DestressVideoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Destress\DestressVideoPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Journal/JournalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Journal.JournalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Journal\JournalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Journal\JournalPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Notifications/AddNotificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Notifications.AddNotificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Notifications\AddNotificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Notifications\AddNotificationPage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Notifications/Notifications.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Notifications.Notifications.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Notifications\Notifications.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Notifications\Notifications.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Profile/BackupAndRestorePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Profile.BackupAndRestorePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Profile\BackupAndRestorePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Profile\BackupAndRestorePage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Pages/Profile/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Pages.Profile.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Profile\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Profile\ProfilePage.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/bacon/OneDrive/Documents/GitHub/SEGP/TabbedNavigation.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SEGP7.TabbedNavigation.xaml
+build_metadata.AdditionalFiles.TargetPath = TabbedNavigation.xaml
+build_metadata.AdditionalFiles.RelativePath = TabbedNavigation.xaml
