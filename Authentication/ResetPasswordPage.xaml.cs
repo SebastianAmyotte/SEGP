@@ -1,6 +1,8 @@
 using SEGP7.Firebase;
-
 namespace SEGP7.Authentication;
+
+//Author: Andrew Zarling
+//A page that allows the user to reset their passsword, if they so choose to.
 
 public partial class ResetPasswordPage : ContentPage
 {
