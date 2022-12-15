@@ -17,7 +17,7 @@
         <Setter Property="Stroke" Value="{StaticResource Gray200}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
     </Style>
 
     <Style TargetType="BoxView">
@@ -68,7 +68,7 @@
 
     <Style TargetType="DatePicker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -88,8 +88,8 @@
     </Style>
 
     <Style TargetType="Editor">
-        <Setter Property="TextColor" Value="{StaticResource Black}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray200}" />
@@ -110,8 +110,8 @@
     </Style>
 
     <Style TargetType="Entry">
-        <Setter Property="TextColor" Value="{StaticResource Black}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="TextColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray200}" />
@@ -160,7 +160,7 @@
 
     <Style TargetType="Label">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -185,7 +185,7 @@
     <Style TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="TitleColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -222,7 +222,7 @@
     </Style>
 
     <Style TargetType="RadioButton">
-        <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}"/>
         <Setter Property="TextColor" Value="{StaticResource Black}" />
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
@@ -250,7 +250,7 @@
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray500}" />
         <Setter Property="CancelButtonColor" Value="{StaticResource Gray500}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -273,7 +273,7 @@
     <Style TargetType="SearchHandler">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
         <Setter Property="PlaceholderColor" Value="{StaticResource Gray500}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
@@ -319,7 +319,7 @@
     </Style>
 
     <Style TargetType="SwipeItem">
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
     </Style>
 
     <Style TargetType="Switch">
@@ -353,7 +353,7 @@
 
     <Style TargetType="TimePicker">
         <Setter Property="TextColor" Value="{StaticResource Gray900}" />
-        <Setter Property="BackgroundColor" Value="{StaticResource White}"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}"/>
         <Setter Property="FontFamily" Value="OpenSansRegular"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="MinimumHeightRequest" Value="44"/>
@@ -374,7 +374,7 @@
 
     <Style TargetType="Page" ApplyToDerivedTypes="True">
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
     </Style>
 
     <Style TargetType="Shell" ApplyToDerivedTypes="True">
@@ -384,7 +384,7 @@
         <Setter Property="Shell.DisabledColor" Value="{StaticResource Gray200}" />
         <Setter Property="Shell.UnselectedColor" Value="{StaticResource Gray200}" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
-        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource Primary}" />
         <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource Primary}" />
         <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Gray900}" />
@@ -397,14 +397,14 @@
     </Style>
 
     <Style TargetType="TabbedPage">
-        <Setter Property="BarBackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BarBackgroundColor" Value="{StaticResource Tertiary}" />
         <Setter Property="BarTextColor" Value="{StaticResource Primary}" />
         <Setter Property="UnselectedTabColor" Value="{StaticResource Gray200}" />
         <Setter Property="SelectedTabColor" Value="{StaticResource Gray950}" />
     </Style>
 
     <Style TargetType="HorizontalStackLayout">
-        <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource Tertiary}" />
     </Style>
 
 </ResourceDictionary>

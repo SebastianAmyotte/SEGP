@@ -7,8 +7,13 @@
     <ScrollView>
         <StackLayout VerticalOptions="Start" Padding="25">
             <VerticalStackLayout HorizontalOptions="Center">
-                <Image Source="accountdefault.png"
-               WidthRequest="125"/>
+                <Border WidthRequest="125" BackgroundColor="{StaticResource Black}">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="90,90,90,90"/>
+                    </Border.StrokeShape>
+                    <Image Source="accountdefault.png" WidthRequest="125"/>
+                </Border>
+                    
                 <Label HorizontalOptions="Center"
                    Text="You are currently logged into:"
                    FontSize="18"

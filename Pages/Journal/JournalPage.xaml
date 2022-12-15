@@ -4,17 +4,29 @@
              x:Class="SEGP7.Pages.JournalPage"
              Title="Journal">
     <StackLayout Orientation="Vertical">
-        <FlexLayout JustifyContent="Center">
-            <ImageButton Source="arrowback.png"
-                 Margin="0, 0, 15, 0"
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Border WidthRequest="55" BackgroundColor="{StaticResource Black}" Margin="0, 5, 15, 0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="90,90,90,90"/>
+                </Border.StrokeShape>
+                <ImageButton Source="arrowback.png"
                  Clicked="OnBackButtonPressed"
-                 HeightRequest="50"/>
+                 HeightRequest="50"
+                 BackgroundColor="{StaticResource Black}"/>
+            </Border>
+            
             <DatePicker x:Name="datePicker" FontSize="26" DateSelected="OnDatePickerChanged"/>
-            <ImageButton Source="arrownext.png" 
+
+            <Border WidthRequest="55" BackgroundColor="{StaticResource Black}" Margin="15, 5, 0, 0" HorizontalOptions="End">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="90,90,90,90"/>
+                </Border.StrokeShape>
+                <ImageButton Source="arrownext.png" 
                  Clicked="OnNextButtonPressed"
                  HeightRequest="50"
-                 Margin="15, 0, 0, 0"/>
-        </FlexLayout>
+                 BackgroundColor="{StaticResource Black}"/>
+            </Border>
+        </HorizontalStackLayout>
         <HorizontalStackLayout HorizontalOptions="Center">
             <Label Text="Today's Rating:" FontSize="32" Padding="10"
                    VerticalTextAlignment="Center"/>
