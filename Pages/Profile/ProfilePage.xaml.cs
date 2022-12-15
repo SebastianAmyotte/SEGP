@@ -44,9 +44,15 @@ public partial class ProfilePage : ContentPage
             DisplayAlert("Password reset", $"An email has been sent to {userEmail} with a link to change your password. Check your junk/spam!", "OK");
         }
     }
-    public void OnDeleteAccountButtonPressed(object sender, EventArgs e)
+    public async void OnDeleteAccountButtonPressed(object sender, EventArgs e)
     {
-        MessagingCenter.Send(currentCredentials.User.Email, "DeleteAccount");
+        bool result = await DisplayAlert("Delete account?", $"IfAre you sure you want to delete your account: {currentCredentials.User.Email}? This process is unreversable", "Yes", "No");
+        if (result)
+        {
+            MessagingCenter.Send(currentCredentials.User.Email, "DeleteAccount");
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
+        }
+        
     }
     public void OnQuitButtonPressed(object sender, EventArgs e)
     {
