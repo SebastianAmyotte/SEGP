@@ -2,6 +2,10 @@
 using Npgsql;
 using System.Data;
 
+// Author: Sebastian Amyotte
+// Description: A controller that communicates with Bit.IO
+// Hides SQL commands away from people who call the controller
+
 namespace SEGP7.Firebase
 {
 
@@ -15,6 +19,7 @@ namespace SEGP7.Firebase
             SubscribeAndSendMessages();
         }
         
+        // Writes an entry to the database with the given data and column name
         void WriteEntry(String data, String columnName)
         {
             try
@@ -32,6 +37,7 @@ namespace SEGP7.Firebase
             }
         }
 
+        //  Returns the data from the given column name
         String LoadEntry(String columnName)
         {
             try
@@ -54,14 +60,14 @@ namespace SEGP7.Firebase
             }
         }
 
-
+       // Creates a dummy new user
         void RegisterUser(String email)
         {
             try
             {
                 using var con = new NpgsqlConnection(DBURL);
                 con.Open();
-                var sql = $"INSERT INTO userdata VALUES ('{email}', '{{}}', '{{}}','{{}}');";
+                var sql = $"INSERT INTO userdata VALUES ('{email}', '', '','{{}}');";
                 using var cmd = new NpgsqlCommand(sql, con);
                 using NpgsqlDataReader reader = cmd.ExecuteReaderAsync().Result;
                 reader.Close();
@@ -73,6 +79,7 @@ namespace SEGP7.Firebase
             }
         }
 
+        // Deletes the current user
         void DeleteAccount(String email)
         {
             try
@@ -91,6 +98,7 @@ namespace SEGP7.Firebase
             }
         }
 
+        // Database setup
         void DatabaseSetup()
         {
             var bitHost = "db.bit.io";
@@ -100,16 +108,17 @@ namespace SEGP7.Firebase
             DBURL = $"Host={bitHost};Username={bitUser};Password={bitApiKey};Database={bitDbName}";
         }
 
+        // Subscribes to all the listener pipelines
         void SubscribeAndSendMessages()
         {
-            //Subscribe to new credentials
+            // Subscribe to new credentials
             MessagingCenter.Subscribe<FirebaseAuthLink>(this, "GetCredentials", (newCredentials) =>
             {
                 currentCredentials = newCredentials;
             });
-            //Subscribe to FirebaseAuth new user
+            // Subscribe to FirebaseAuth new user
             MessagingCenter.Subscribe<String>(this, "NewUserBitIO", (email) => RegisterUser(email));
-            //Subscribe to Deleting current user
+            // Subscribe to Deleting current user
             MessagingCenter.Subscribe<String>(this, "DeleteAccount", (email) => DeleteAccount(email));
             
 
